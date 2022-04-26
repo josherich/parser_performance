@@ -1,5 +1,10 @@
 # parser_performance
 
+## Testing performance of @babel/parser@7.16.12
+
+<img width="1527" alt="Screen Shot 2022-04-26 at 6 09 34 PM" src="https://user-images.githubusercontent.com/1488391/165400865-4b1f9ac1-61e3-4bcd-aa13-79d5e529e1f8.png">
+
+
 > Parses various [fixtures](/fixtures) and outputs parse times over various iterations
 
 ## Run
