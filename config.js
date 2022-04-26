@@ -1,6 +1,9 @@
 const babelDevPath = process.env.BABEL_PARSER_PATH || "../babel/packages/babel-parser";
 
-const babelParse = require("@babel/parser").parse;
+const babelParse7_16_8 = require("babel-parser-7_16_8").parse;
+const babelParse7_16_12 = require("babel-parser-7_16_12").parse;
+const babelParse7_17_0 = require("babel-parser-7_17_0").parse;
+
 const babelDevParse = require(babelDevPath).parse;
 const acornParse = require("acorn").parse;
 const esprimaParse = require("esprima").parse;
@@ -28,8 +31,16 @@ const parsers = {
     parse: acornParse,
     options: { sourceType: "module", locations: true }
   },
-  babel: {
-    parse: babelParse,
+  babelParse7_16_8: {
+    parse: babelParse7_16_8,
+    options: { sourceType: "module" }
+  },
+  babelParse7_16_12: {
+    parse: babelParse7_16_12,
+    options: { sourceType: "module" }
+  },
+  babelParse7_17_0: {
+    parse: babelParse7_17_0,
     options: { sourceType: "module" }
   },
   dev: {

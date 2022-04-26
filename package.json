@@ -14,7 +14,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@babel/parser": "^7.6.0",
+    "babel-parser-7_16_8": "npm:@babel/parser@7.16.8",
+    "babel-parser-7_16_12": "npm:@babel/parser@7.16.12",
+    "babel-parser-7_17_0": "npm:@babel/parser@7.17.0",
     "acorn": "^7.1.1",
     "cli-table": "^0.3.1",
     "esprima": "^4.0.1",
