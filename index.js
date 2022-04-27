@@ -17,6 +17,7 @@ const table = new Table({
     head: ["bold"]
   }
 });
+const data = {}
 
 if (!global.gc) {
   console.error(
@@ -40,6 +41,7 @@ files.forEach(file => {
     });
   }
   const result = [suite.name];
+  const rows = [];
   suite.on("cycle", function(event) {
     {
       // separate scope so we can cleanup all this afterwards
@@ -51,6 +53,7 @@ files.forEach(file => {
         factor} ops/sec ±${Math.round(bench.stats.rme * 100) /
         100}% (${time})`;
       result.push(msg);
+      rows.push([Math.round(bench.hz * factor) / factor, Math.round(bench.stats.rme * 100) / 100, time]);
     }
     global.gc();
   });
@@ -60,6 +63,11 @@ files.forEach(file => {
   suite.run({ async: false });
   global.gc(); // gc is disabled so ensure we run it
   table.push(result);
+  data[file] = rows;
 });
 global.gc(); // gc is disabled so ensure we run it
 console.log(table.toString());
+console.log(head);
+console.log("=========================")
+console.log(data);
+fs.writeFileSync('benchmark.json', JSON.stringify(data));

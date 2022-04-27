@@ -1,10 +1,12 @@
 const babelDevPath = process.env.BABEL_PARSER_PATH || "../babel/packages/babel-parser";
 
-const babelParse7_16_8 = require("babel-parser-7_16_8").parse;
-const babelParse7_16_12 = require("babel-parser-7_16_12").parse;
-const babelParse7_17_0 = require("babel-parser-7_17_0").parse;
+const { spawnSync } = require('child_process');
+const packageName = '@babel/parser';
 
-const babelDevParse = require(babelDevPath).parse;
+const list =  spawnSync('npm', ['view', packageName, 'versions', '--json']);
+const all = JSON.parse(list.stdout);
+
+// const babelDevParse = require(babelDevPath).parse;
 const acornParse = require("acorn").parse;
 const esprimaParse = require("esprima").parse;
 const meriyahParse = require("meriyah").parseModule;
@@ -31,22 +33,6 @@ const parsers = {
     parse: acornParse,
     options: { sourceType: "module", locations: true }
   },
-  babelParse7_16_8: {
-    parse: babelParse7_16_8,
-    options: { sourceType: "module" }
-  },
-  babelParse7_16_12: {
-    parse: babelParse7_16_12,
-    options: { sourceType: "module" }
-  },
-  babelParse7_17_0: {
-    parse: babelParse7_17_0,
-    options: { sourceType: "module" }
-  },
-  dev: {
-    parse: babelDevParse,
-    options: { sourceType: "module" }
-  },
   esprima: {
     parse: esprimaParse,
     options: { sourceType: "module", loc: true, comment: true, attachComment: true }
@@ -56,6 +42,15 @@ const parsers = {
     options: { loc: true }
   },
 };
+
+all.forEach(version => {
+  if (version.includes('rc') || version.includes('beta')) return;
+
+  parsers[`babel_parser_${version}`] = {
+    parse: require(`@babel/parser_${version}`).parse,
+    options: { sourceType: "module" }
+  }
+})
 
 const parserSelection = (function () {
   if (process.env.PARSER_ALL) {
