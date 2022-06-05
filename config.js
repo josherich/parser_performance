@@ -4,11 +4,11 @@ const { spawnSync } = require('child_process');
 const packageName = '@babel/parser';
 
 let all = [];
-if (process.env.BABEL_PARSER) {
-  all = [process.env.BABEL_PARSER];
-} else if (process.env.PARSER_ALL) {
+if (process.env.PARSER_ALL) {
   const list =  spawnSync('npm', ['view', packageName, 'versions', '--json']);
   all = JSON.parse(list.stdout);
+} else if (process.env.BABEL_PARSER) {
+  all = process.env.BABEL_PARSER.split(",");
 }
 
 // const babelDevParse = require(babelDevPath).parse;
@@ -61,11 +61,8 @@ const parserSelection = (function () {
   if (process.env.PARSER_ALL) {
     return Object.keys(parsers);
   }
-  if (process.env.PARSER) {
-    return process.env.PARSER.split(",");
-  }
   if (process.env.BABEL_PARSER) {
-    return [`babel_parser_${process.env.BABEL_PARSER}`]
+    return process.env.BABEL_PARSER.split(",").map(v => `babel_parser_${v}`);
   }
   return ["dev"];
 })();

@@ -1,10 +1,23 @@
 # parser_performance
 
-## Testing performance of @babel/parser@7.16.12
+## Testing performance of @babel/parser@7.16.10
+
+1. install all babel parser versions
+
+`npm run install`
+
+2. Run performance tests from parser_performance
+`BABEL_PARSER=7.16.8,7.16.10,7.17.0 npm run test`
 
 <img width="1527" alt="Screen Shot 2022-04-26 at 6 09 34 PM" src="https://user-images.githubusercontent.com/1488391/165400865-4b1f9ac1-61e3-4bcd-aa13-79d5e529e1f8.png">
 
+3. Get Flamegraph using 0x to look for root cause of slowness
+
+`BABEL_PARSER='7.16.10' 0x -o profile.js`
+
 <img width="2050" alt="Screen Shot 2022-06-04 at 10 51 59 PM" src="https://user-images.githubusercontent.com/1488391/172032919-b14452de-3c14-40f6-8a87-4bc99313fede.png">
+
+<hr>
 
 > Parses various [fixtures](/fixtures) and outputs parse times over various iterations
 
