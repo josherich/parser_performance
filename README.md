@@ -4,6 +4,7 @@
 
 <img width="1527" alt="Screen Shot 2022-04-26 at 6 09 34 PM" src="https://user-images.githubusercontent.com/1488391/165400865-4b1f9ac1-61e3-4bcd-aa13-79d5e529e1f8.png">
 
+<img width="2050" alt="Screen Shot 2022-06-04 at 10 51 59 PM" src="https://user-images.githubusercontent.com/1488391/172032919-b14452de-3c14-40f6-8a87-4bc99313fede.png">
 
 > Parses various [fixtures](/fixtures) and outputs parse times over various iterations
 
