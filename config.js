@@ -3,8 +3,13 @@ const babelDevPath = process.env.BABEL_PARSER_PATH || "../babel/packages/babel-p
 const { spawnSync } = require('child_process');
 const packageName = '@babel/parser';
 
-const list =  spawnSync('npm', ['view', packageName, 'versions', '--json']);
-const all = JSON.parse(list.stdout);
+let all = [];
+if (process.env.BABEL_PARSER) {
+  all = [process.env.BABEL_PARSER];
+} else if (process.env.PARSER_ALL) {
+  const list =  spawnSync('npm', ['view', packageName, 'versions', '--json']);
+  all = JSON.parse(list.stdout);
+}
 
 // const babelDevParse = require(babelDevPath).parse;
 const acornParse = require("acorn").parse;
@@ -58,9 +63,11 @@ const parserSelection = (function () {
   }
   if (process.env.PARSER) {
     return process.env.PARSER.split(",");
-  } else {
-    return ["dev"];
   }
+  if (process.env.BABEL_PARSER) {
+    return [`babel_parser_${process.env.BABEL_PARSER}`]
+  }
+  return ["dev"];
 })();
 
 exports.parsers = Object.keys(parsers).filter(key => {

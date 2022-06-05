@@ -6,7 +6,11 @@ const all = JSON.parse(list.stdout);
 
 all.forEach(version => {
   if (version.includes('rc') || version.includes('beta')) return;
-
-  let res = spawnSync('npm', ['install', '--save', `${packageName}_${version}@npm:${packageName}@${version}`]);
-  console.log(res.stdout.toString())
+  try {
+    require(`${packageName}_${version}`);
+    console.log(`${packageName}_${version} installed.`);
+  } catch (e) {
+    let res = spawnSync('npm', ['install', '--save', `${packageName}_${version}@npm:${packageName}@${version}`]);
+    console.log(res.stdout.toString())
+  }
 })

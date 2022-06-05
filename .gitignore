@@ -4,3 +4,4 @@ isolate*.log
 cpuprofile/
 *.bytecode
 *.asm
+*.0x
