@@ -1,0 +1,1482 @@
+nm: /usr/lib/x86_64-linux-gnu/libgcc_s.so.1: no symbols
+nm: /usr/lib/x86_64-linux-gnu/libdl-2.31.so: no symbols
+nm: /usr/lib/x86_64-linux-gnu/libc-2.31.so: no symbols
+nm: /usr/lib/x86_64-linux-gnu/libm-2.31.so: no symbols
+nm: /usr/lib/x86_64-linux-gnu/ld-2.31.so: no symbols
+nm: '[vdso]': No such file
+Statistical profiling result from v8.log, (169086 ticks, 22 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   9350    5.5%          /home/joshchen/v8/out.gn/x64.debug/libv8.so
+    158    0.1%          /usr/lib/x86_64-linux-gnu/libc-2.31.so
+     51    0.0%          /home/joshchen/v8/out.gn/x64.debug/d8
+      7    0.0%          /usr/lib/x86_64-linux-gnu/ld-2.31.so
+      3    0.0%          /home/joshchen/v8/out.gn/x64.debug/libv8_libbase.so
+      1    0.0%          /home/joshchen/v8/out.gn/x64.debug/libv8_libplatform.so
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+   1225    0.7%    0.8%  Builtin: KeyedStoreIC_Megamorphic   
+   1050    0.6%    0.7%  Builtin: KeyedStoreICTrampoline
+    899    0.5%    0.6%  Builtin: KeyedStoreIC
+    168    0.1%    0.1%  JS: *Case.runJsObject test.js:120:39
+     36    0.0%    0.0%  Builtin: RecordWriteSaveFP
+     27    0.0%    0.0%  JS: *Case test.js:15:15
+      6    0.0%    0.0%  Builtin: KeyedLoadIC
+      5    0.0%    0.0%  JS: ~Case.runJsObject test.js:120:39
+      5    0.0%    0.0%  Builtin: LoadIC
+      3    0.0%    0.0%  JS: ~Case.timeEnd test.js:26:29
+      3    0.0%    0.0%  JS: ~Case.logTick test.js:88:35
+      3    0.0%    0.0%  Builtin: StoreIC
+      3    0.0%    0.0%  Builtin: LoadICBaseline
+      3    0.0%    0.0%  Builtin: FastNewObject
+      2    0.0%    0.0%  JS: ^Case test.js:15:15
+      2    0.0%    0.0%  Builtin: LessThan_Baseline
+      2    0.0%    0.0%  Builtin: Construct_Baseline
+      2    0.0%    0.0%  Builtin: Add_Baseline
+      1    0.0%    0.0%  JS: ~TestObject test.js:11:21
+      1    0.0%    0.0%  JS: ~Case test.js:15:15
+      1    0.0%    0.0%  JS: ^Case.runJsObject test.js:120:39
+      1    0.0%    0.0%  Builtin: ToString
+      1    0.0%    0.0%  Builtin: NumberPrototypeToFixed
+      1    0.0%    0.0%  Builtin: KeyedLoadICBaseline
+      1    0.0%    0.0%  Builtin: JSConstructStubGeneric
+      1    0.0%    0.0%  Builtin: Increment_Baseline
+
+ [C++]:
+   ticks  total  nonlib   name
+   5481    3.2%    3.4%  v8::internal::CheckObjectType(unsigned long, unsigned long, unsigned long)
+   4621    2.7%    2.9%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::ptr() const
+   4245    2.5%    2.7%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::TaggedImpl(unsigned long)
+   4227    2.5%    2.6%  v8::internal::TaggedField<v8::internal::MapWord, 0>::Relaxed_Load_Map_Word(v8::internal::PtrComprCageBase, v8::internal::HeapObject)
+   3963    2.3%    2.5%  v8::internal::Map v8::base::bit_cast<v8::internal::Map, v8::internal::Object>(v8::internal::Object const&)
+   3292    1.9%    2.1%  v8::internal::GetPtrComprCageBaseSlow(v8::internal::HeapObject)
+   3072    1.8%    1.9%  v8::internal::Object::Object(unsigned long)
+   3046    1.8%    1.9%  short std::Cr::__cxx_atomic_load[abi:v16000]<short>(std::Cr::__cxx_atomic_base_impl<short> const volatile*, std::Cr::memory_order)
+   2624    1.6%    1.6%  v8::internal::GetIsolateFromHeapObject(v8::internal::HeapObject, v8::internal::Isolate**)
+   2586    1.5%    1.6%  int std::Cr::__cxx_atomic_load[abi:v16000]<int>(std::Cr::__cxx_atomic_base_impl<int> const volatile*, std::Cr::memory_order)
+   2559    1.5%    1.6%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::IsStrong() const
+   2401    1.4%    1.5%  _ZN2v84base9CmpLEImplINS_8internal12InstanceTypeES3_EENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS6_S7_EE5valueEbE4typeES6_S7_
+   2394    1.4%    1.5%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckLEImpl<v8::internal::InstanceType, v8::internal::InstanceType>(v8::internal::InstanceType, v8::internal::InstanceType, char const*)
+   2146    1.3%    1.3%  v8::internal::HeapObject::map_word(v8::internal::PtrComprCageBase, v8::RelaxedLoadTag) const
+   1956    1.2%    1.2%  v8::internal::TorqueGeneratedString<v8::internal::String, v8::internal::Name>::cast(v8::internal::Object)
+   1922    1.1%    1.2%  v8::internal::HeapObject::HeapObject(unsigned long)
+   1907    1.1%    1.2%  v8::internal::GetPtrComprCageBase(v8::internal::HeapObject)
+   1886    1.1%    1.2%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::IsSmi() const
+   1862    1.1%    1.2%  v8::internal::MapWord::ToMap() const
+   1709    1.0%    1.1%  unsigned int v8::base::AsAtomicImpl<int>::Relaxed_Load<unsigned int>(unsigned int*)
+   1697    1.0%    1.1%  v8::internal::HeapObject::map(v8::internal::PtrComprCageBase) const
+   1688    1.0%    1.1%  v8::internal::FlagValue<bool>::operator bool() const
+   1574    0.9%    1.0%  v8::internal::MapWord::MapWord(unsigned long)
+   1454    0.9%    0.9%  v8::internal::TorqueGeneratedMap<v8::internal::Map, v8::internal::HeapObject>::unchecked_cast(v8::internal::Object)
+   1447    0.9%    0.9%  v8::internal::heap_internals::MemoryChunk::InReadOnlySpace() const
+   1359    0.8%    0.9%  v8::base::Relaxed_Load(short const volatile*)
+   1314    0.8%    0.8%  v8::internal::HeapObject::address() const
+   1265    0.7%    0.8%  short std::Cr::atomic_load_explicit[abi:v16000]<short>(std::Cr::atomic<short> const volatile*, std::Cr::memory_order)
+   1263    0.7%    0.8%  v8::internal::TaggedField<v8::internal::MapWord, 0>::location(v8::internal::HeapObject, int)
+   1238    0.7%    0.8%  v8::internal::Smi::value() const
+   1233    0.7%    0.8%  unsigned long v8::internal::DecompressTaggedPointer<v8::internal::PtrComprCageBase>(v8::internal::PtrComprCageBase, unsigned int)
+   1185    0.7%    0.7%  v8::internal::Object::Object()
+   1167    0.7%    0.7%  v8::base::Relaxed_Load(int const volatile*)
+   1160    0.7%    0.7%  v8::internal::heap_internals::MemoryChunk::GetFlags() const
+   1141    0.7%    0.7%  __pthread_cond_wait
+   1098    0.6%    0.7%  std::Cr::__atomic_base<int, false>::load[abi:v16000](std::Cr::memory_order) const volatile
+   1097    0.6%    0.7%  unsigned long v8::internal::TaggedField<v8::internal::MapWord, 0>::tagged_to_full<v8::internal::PtrComprCageBase>(v8::internal::PtrComprCageBase, unsigned int)
+   1086    0.6%    0.7%  std::Cr::__atomic_base<short, false>::load[abi:v16000](std::Cr::memory_order) const volatile
+   1064    0.6%    0.7%  v8::internal::Smi::Smi(unsigned long)
+   1009    0.6%    0.6%  v8::base::AsAtomicImpl<int>::cast_helper<unsigned int>::to_return_type(int)
+    981    0.6%    0.6%  int std::Cr::atomic_load_explicit[abi:v16000]<int>(std::Cr::atomic<int> const volatile*, std::Cr::memory_order)
+    946    0.6%    0.6%  v8::internal::PtrComprCageBase::address() const
+    940    0.6%    0.6%  _ZN2v84base9CmpEQImplIbbEENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS4_S5_EE5valueEbE4typeES4_S5_
+    907    0.5%    0.6%  v8::internal::HeapObject::HeapObject()
+    900    0.5%    0.6%  v8::internal::Smi::IsValid(long)
+    850    0.5%    0.5%  v8::internal::heap_internals::MemoryChunk::FromHeapObject(v8::internal::HeapObject)
+    831    0.5%    0.5%  int* v8::base::AsAtomicImpl<int>::to_storage_addr<unsigned int>(unsigned int*)
+    818    0.5%    0.5%  v8::internal::Map::instance_type() const
+    815    0.5%    0.5%  v8::base::Flags<v8::internal::BasicMemoryChunk::Flag, unsigned long>::operator&(v8::base::Flags<v8::internal::BasicMemoryChunk::Flag, unsigned long> const&) const
+    784    0.5%    0.5%  v8::internal::PtrComprCageBase::PtrComprCageBase(unsigned long)
+    761    0.5%    0.5%  v8::internal::TaggedField<v8::internal::MapWord, 0>::address(v8::internal::HeapObject, int)    755    0.4%    0.5%  v8::internal::Map::Map()
+    746    0.4%    0.5%  v8::internal::GetPtrComprCageBaseFromOnHeapAddress(unsigned long)
+    716    0.4%    0.4%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckEQImpl<bool, bool>(bool, bool, char const*)
+    689    0.4%    0.4%  v8::internal::GetPtrComprCageBaseAddress(v8::internal::PtrComprCageBase)
+    687    0.4%    0.4%  v8::internal::String::String(unsigned long)
+    678    0.4%    0.4%  v8::internal::InstanceTypeChecker::InstanceRangeChecker<(v8::internal::InstanceType)0, (v8::internal::InstanceType)127>::Check(v8::internal::InstanceType)
+    667    0.4%    0.4%  v8::internal::GetPtrComprCageBaseAddress(unsigned long)
+    662    0.4%    0.4%  v8::internal::SmiTagging<4ul>::IsValidSmi(long)
+    661    0.4%    0.4%  v8::internal::LinearAllocationArea::Verify() const
+    654    0.4%    0.4%  v8::internal::TorqueGeneratedPrimitiveHeapObject<v8::internal::PrimitiveHeapObject, v8::internal::HeapObject>::TorqueGeneratedPrimitiveHeapObject(unsigned long)
+    654    0.4%    0.4%  std::Cr::atomic<int> const volatile* v8::base::helper::to_std_atomic_const<int>(int const volatile*)
+    652    0.4%    0.4%  char std::Cr::__cxx_atomic_load[abi:v16000]<char>(std::Cr::__cxx_atomic_base_impl<char> const volatile*, std::Cr::memory_order)
+    647    0.4%    0.4%  v8::internal::TorqueGeneratedString<v8::internal::String, v8::internal::Name>::TorqueGeneratedString(unsigned long)
+    638    0.4%    0.4%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::IsHeapObject() const
+    632    0.4%    0.4%  v8::internal::Smi::FromInt(int)
+    620    0.4%    0.4%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckLTImpl<unsigned long, unsigned long>(unsigned long, unsigned long, char const*)
+    586    0.3%    0.4%  v8::base::Flags<v8::internal::BasicMemoryChunk::Flag, unsigned long>::operator&(v8::internal::BasicMemoryChunk::Flag) const
+    577    0.3%    0.4%  v8::internal::InstanceTypeChecker::IsString(v8::internal::InstanceType)
+    573    0.3%    0.4%  unsigned long RoundDown<4294967296l, unsigned long>(unsigned long)
+    564    0.3%    0.4%  v8::internal::TorqueGeneratedName<v8::internal::Name, v8::internal::PrimitiveHeapObject>::TorqueGeneratedName(unsigned long)
+    557    0.3%    0.3%  v8::internal::InstanceTypeChecker::InstanceRangeChecker<(v8::internal::InstanceType)0, (v8::internal::InstanceType)131>::Check(v8::internal::InstanceType)
+    552    0.3%    0.3%  v8::internal::InstanceTypeChecker::InstanceRangeChecker<(v8::internal::InstanceType)0, (v8::internal::InstanceType)128>::Check(v8::internal::InstanceType)
+    538    0.3%    0.3%  std::Cr::atomic<short> const volatile* v8::base::helper::to_std_atomic_const<short>(short const volatile*)
+    529    0.3%    0.3%  v8::internal::SlotCallbackResult v8::internal::Scavenger::CheckAndScavengeObject<v8::internal::CompressedMaybeObjectSlot>(v8::internal::Heap*, v8::internal::CompressedMaybeObjectSlot)
+    506    0.3%    0.3%  v8::internal::Internals::IsValidSmi(long)
+    491    0.3%    0.3%  v8::internal::BasicMemoryChunk::IsFlagSet(v8::internal::BasicMemoryChunk::Flag) const
+    478    0.3%    0.3%  v8::internal::HeapObject::IsPrimitiveHeapObject() const
+    464    0.3%    0.3%  v8::internal::InstanceTypeChecker::IsName(v8::internal::InstanceType)
+    459    0.3%    0.3%  v8::internal::SlotCallbackResult v8::internal::Scavenger::EvacuateObject<v8::internal::CompressedHeapObjectSlot>(v8::internal::CompressedHeapObjectSlot, v8::internal::Map, v8::internal::HeapObject)
+    449    0.3%    0.3%  v8::internal::TorqueGeneratedMap<v8::internal::Map, v8::internal::HeapObject>::TorqueGeneratedMap<v8::internal::Map>()
+    447    0.3%    0.3%  v8::internal::HeapObject::IsString(v8::internal::PtrComprCageBase) const
+    440    0.3%    0.3%  v8::internal::Scavenger::ScavengePage(v8::internal::MemoryChunk*)::$_4::operator()(v8::internal::CompressedMaybeObjectSlot) const
+    436    0.3%    0.3%  v8::internal::SlotCallbackResult v8::internal::Scavenger::ScavengeObject<v8::internal::CompressedHeapObjectSlot>(v8::internal::CompressedHeapObjectSlot, v8::internal::HeapObject)
+    432    0.3%    0.3%  v8::internal::Internals::SmiValue(unsigned long)
+    424    0.3%    0.3%  v8::internal::SmiTagging<4ul>::SmiToInt(unsigned long)
+    418    0.2%    0.3%  bool std::Cr::__cxx_atomic_compare_exchange_strong[abi:v16000]<int>(std::Cr::__cxx_atomic_base_impl<int> volatile*, int*, int, std::Cr::memory_order, std::Cr::memory_order)
+    411    0.2%    0.3%  v8::internal::InstanceTypeChecker::IsPrimitiveHeapObject(v8::internal::InstanceType)
+    400    0.2%    0.3%  v8::internal::ReadOnlyRoots::GetLocation(v8::internal::RootIndex) const
+    387    0.2%    0.2%  v8::base::Flags<v8::internal::BasicMemoryChunk::Flag, unsigned long>::Flags(unsigned long)
+    363    0.2%    0.2%  _ZN2v84base9CmpLTImplImmEENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS4_S5_EE5valueEbE4typeES4_S5_
+    360    0.2%    0.2%  v8::internal::SlotCallbackResult v8::internal::Scavenger::EvacuateObjectDefault<v8::internal::CompressedHeapObjectSlot, (v8::internal::Scavenger::PromotionHeapChoice)0>(v8::internal::Map, v8::internal::CompressedHeapObjectSlot, v8::internal::HeapObject, int, v8::internal::ObjectFields)
+    360    0.2%    0.2%  v8::internal::SemiSpaceNewSpace::ShouldBePromoted(unsigned long) const
+    352    0.2%    0.2%  void v8::internal::CopyImpl<16ul, unsigned int>(unsigned int*, unsigned int const*, unsigned long)
+    334    0.2%    0.2%  v8::internal::PtrComprCageBase::PtrComprCageBase(v8::internal::Isolate const*)
+    332    0.2%    0.2%  unsigned long v8::internal::SlotSet::Iterate<v8::internal::Scavenger::ScavengePage(v8::internal::MemoryChunk*)::$_4, v8::internal::SlotSet::IterateAndTrackEmptyBuckets<v8::internal::Scavenger::ScavengePage(v8::internal::MemoryChunk*)::$_4>(unsigned long, unsigned long, unsigned long, v8::internal::Scavenger::ScavengePage(v8::internal::MemoryChunk*)::$_4, v8::internal::PossiblyEmptyBuckets*)::{lambda(unsigned long)#1}>(unsigned long, unsigned long, unsigned long, v8::internal::Scavenger::ScavengePage(v8::internal::MemoryChunk*)::$_4, v8::internal::SlotSet::IterateAndTrackEmptyBuckets<v8::internal::Scavenger::ScavengePage(v8::internal::MemoryChunk*)::$_4>(unsigned long, unsigned long, unsigned long, v8::internal::Scavenger::ScavengePage(v8::internal::MemoryChunk*)::$_4, v8::internal::PossiblyEmptyBuckets*)::{lambda(unsigned long)#1})
+    319    0.2%    0.2%  v8::internal::HeapObject::IsString() const
+    317    0.2%    0.2%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)0, unsigned long>::GetHeapObject() const
+    315    0.2%    0.2%  void v8::internal::HeapObjectReference::Update<v8::internal::CompressedHeapObjectSlot>(v8::internal::CompressedHeapObjectSlot, v8::internal::HeapObject)
+    315    0.2%    0.2%  bool IsAligned<unsigned long, unsigned long>(unsigned long, unsigned long)
+    312    0.2%    0.2%  v8::internal::Bitmap::MarkBitFromIndex(unsigned int)
+    310    0.2%    0.2%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)0, unsigned long>::ptr() const
+    310    0.2%    0.2%  v8::internal::Name::Name(unsigned long)
+    310    0.2%    0.2%  v8::internal::HeapObject::IsMap() const
+    299    0.2%    0.2%  v8::internal::HeapObject::IsName() const
+    296    0.2%    0.2%  v8::internal::Object::IsMap() const
+    294    0.2%    0.2%  v8::internal::IsolateData::cage_base() const
+    292    0.2%    0.2%  v8::internal::HeapObject::IsPrimitiveHeapObject(v8::internal::PtrComprCageBase) const
+    292    0.2%    0.2%  bool IsAligned<unsigned long, int>(unsigned long, int)
+    285    0.2%    0.2%  v8::internal::HeapObject::IsName(v8::internal::PtrComprCageBase) const
+    274    0.2%    0.2%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)0, unsigned long>::IsSmi() const
+    272    0.2%    0.2%  v8::internal::ReadOnlyRoots::allocation_memento_map() const
+    266    0.2%    0.2%  v8::internal::HeapObject::SizeFromMap(v8::internal::Map) const
+    256    0.2%    0.2%  v8::internal::HeapObject::IsMap(v8::internal::PtrComprCageBase) const
+    255    0.2%    0.2%  v8::internal::AllocationMemento v8::internal::Heap::FindAllocationMemento<(v8::internal::Heap::FindMementoMode)1>(v8::internal::Map, v8::internal::HeapObject)
+    254    0.2%    0.2%  v8::internal::Isolate::cage_base() const
+    252    0.1%    0.2%  unsigned long RoundUp<unsigned long>(unsigned long, long)
+    251    0.1%    0.2%  v8::internal::InstanceTypeChecker::IsMap(v8::internal::InstanceType)
+    250    0.1%    0.2%  v8::internal::BasicMemoryChunk::FromHeapObject(v8::internal::HeapObject)
+    249    0.1%    0.2%  v8::internal::Heap::InFromPage(v8::internal::HeapObject)
+    248    0.1%    0.2%  v8::internal::heap_internals::MemoryChunk::GetHeap()
+    247    0.1%    0.2%  v8::internal::MarkingStateBase<v8::internal::NonAtomicMarkingState, (v8::internal::AccessMode)1>::MarkBitFrom(v8::internal::HeapObject) const
+    240    0.1%    0.2%  v8::internal::MapWord::IsForwardingAddress() const
+    230    0.1%    0.1%  v8::internal::Isolate::FromHeap(v8::internal::Heap const*)
+    229    0.1%    0.1%  v8::internal::BasicMemoryChunk::BaseAddress(unsigned long)
+    225    0.1%    0.1%  v8::base::Flags<v8::internal::BasicMemoryChunk::Flag, unsigned long>::operator unsigned long() const
+    222    0.1%    0.1%  v8::internal::MapWord::FromMap(v8::internal::Map)
+    217    0.1%    0.1%  v8::internal::Scavenger::heap()
+    216    0.1%    0.1%  v8::internal::InvalidatedSlotsFilter::IsValid(unsigned long)
+    214    0.1%    0.1%  v8::internal::HeapObjectReference::HeapObjectReference(unsigned long)
+    214    0.1%    0.1%  heap::base::internal::SegmentBase::IsFull() const
+    213    0.1%    0.1%  v8::internal::MarkingStateBase<v8::internal::NonAtomicMarkingState, (v8::internal::AccessMode)1>::IsWhite(v8::internal::HeapObject) const
+    211    0.1%    0.1%  v8::internal::Scavenger::MigrateObject(v8::internal::Map, v8::internal::HeapObject, v8::internal::HeapObject, int, v8::internal::Scavenger::PromotionHeapChoice)
+    204    0.1%    0.1%  v8::internal::CompressedMaybeObjectSlot::operator*() const
+    202    0.1%    0.1%  std::Cr::__atomic_base<char, false>::load[abi:v16000](std::Cr::memory_order) const volatile    202    0.1%    0.1%  _ZN2v84base4bits18CountTrailingZerosIjLj32EEENSt2Cr9enable_ifIXaasr3std11is_integralIT_EE5valuelestS5_Li8EEjE4typeES5_
+    200    0.1%    0.1%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)0, unsigned long>::TaggedImpl(unsigned long)
+    199    0.1%    0.1%  v8::internal::SlotBase<v8::internal::FullObjectSlot, unsigned long, 8ul>::SlotBase(unsigned long)
+    199    0.1%    0.1%  v8::internal::ReadOnlyRoots::unchecked_allocation_memento_map() const
+    198    0.1%    0.1%  v8::internal::PrimitiveHeapObject::PrimitiveHeapObject(unsigned long)
+    197    0.1%    0.1%  v8::internal::BasicMemoryChunk::GetFlags() const
+    194    0.1%    0.1%  v8::internal::HeapObject::cast(v8::internal::Object)
+    194    0.1%    0.1%  v8::internal::HeapObject::IsSharedFunctionInfo() const
+    189    0.1%    0.1%  v8::internal::MaybeObject::MaybeObject(unsigned long)
+    188    0.1%    0.1%  v8::internal::HeapObject::map_word(v8::AcquireLoadTag) const
+    188    0.1%    0.1%  std::Cr::basic_string<char, v8::internal::HeapObject::{unnamed type#1}::char_traits<char>, v8::internal::HeapObject::{unnamed type#1}::allocator<char> >* v8::base::CheckNEImpl<int, v8::internal::HeapObject::{unnamed type#1}>(int, v8::internal::HeapObject::{unnamed type#1}, char const*)
+    187    0.1%    0.1%  v8::internal::SlotBase<v8::internal::CompressedMaybeObjectSlot, unsigned int, 4ul>::location() const
+    186    0.1%    0.1%  v8::internal::Heap::UpdateAllocationSite(v8::internal::Map, v8::internal::HeapObject, std::Cr::unordered_map<v8::internal::AllocationSite, unsigned long, v8::internal::Object::Hasher, std::Cr::equal_to<v8::internal::AllocationSite>, std::Cr::allocator<std::Cr::pair<v8::internal::AllocationSite const, unsigned long> > >*)
+    186    0.1%    0.1%  v8::base::Relaxed_Load(char const volatile*)
+    179    0.1%    0.1%  bool v8::internal::Marking::IsWhite<(v8::internal::AccessMode)1>(v8::internal::MarkBit)
+    178    0.1%    0.1%  v8::internal::CompressedHeapObjectSlot::operator*() const
+    177    0.1%    0.1%  v8::internal::TaggedField<v8::internal::Smi, 0>::load(v8::internal::HeapObject, int)
+    175    0.1%    0.1%  v8::internal::IntToSmi(int)
+    173    0.1%    0.1%  v8::internal::Oddball v8::base::bit_cast<v8::internal::Oddball, v8::internal::Object>(v8::internal::Object const&)
+    172    0.1%    0.1%  v8::internal::SlotBase<v8::internal::CompressedObjectSlot, unsigned int, 4ul>::address() const
+    172    0.1%    0.1%  v8::internal::IsPrimitiveHeapObject_NonInline(v8::internal::HeapObject)
+    172    0.1%    0.1%  v8::internal::IsName_NonInline(v8::internal::HeapObject)
+    171    0.1%    0.1%  v8::internal::BaseSpace* std::Cr::__cxx_atomic_load[abi:v16000]<v8::internal::BaseSpace*>(std::Cr::__cxx_atomic_base_impl<v8::internal::BaseSpace*> const*, std::Cr::memory_order)
+    167    0.1%    0.1%  std::Cr::atomic<char> const volatile* v8::base::helper::to_std_atomic_const<char>(char const volatile*)
+    166    0.1%    0.1%  v8::internal::SlotBase<v8::internal::CompressedHeapObjectSlot, unsigned int, 4ul>::SlotBase(unsigned long)
+    165    0.1%    0.1%  v8::internal::Object::IsFeedbackVector() const
+    165    0.1%    0.1%  v8::internal::Object::IsContext() const
+    165    0.1%    0.1%  v8::internal::HeapObject::is_null() const
+    165    0.1%    0.1%  char std::Cr::atomic_load_explicit[abi:v16000]<char>(std::Cr::atomic<char> const volatile*, std::Cr::memory_order)
+    164    0.1%    0.1%  heap::base::Worklist<std::Cr::pair<v8::internal::HeapObject, int>, (unsigned short)256>::Segment::Push(std::Cr::pair<v8::internal::HeapObject, int>)
+    163    0.1%    0.1%  v8::internal::BasicMemoryChunk::InYoungGeneration() const
+    161    0.1%    0.1%  v8::internal::Heap::Contains(v8::internal::HeapObject) const
+    161    0.1%    0.1%  v8::base::Flags<v8::internal::BasicMemoryChunk::Flag, unsigned long>::Flags(v8::internal::BasicMemoryChunk::Flag)
+    158    0.1%    0.1%  v8::internal::IsString_NonInline(v8::internal::HeapObject)
+    158    0.1%    0.1%  v8::internal::Internals::HasHeapObjectTag(unsigned long)
+    153    0.1%    0.1%  v8::internal::FixedArray::get(v8::internal::PtrComprCageBase, int) const
+    151    0.1%    0.1%  v8::internal::ReadOnlyRoots::ReadOnlyRoots(v8::internal::Isolate*)
+    150    0.1%    0.1%  v8::internal::Isolate::isolate_data() const
+    148    0.1%    0.1%  v8::base::Use::Use<unsigned long>(unsigned long&&)
+    147    0.1%    0.1%  v8::internal::Heap::AllowedToBeMigrated(v8::internal::Map, v8::internal::HeapObject, v8::internal::AllocationSpace)
+    145    0.1%    0.1%  v8::internal::BasicMemoryChunk::address() const
+    145    0.1%    0.1%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckLEImpl<unsigned long, unsigned long>(unsigned long, unsigned long, char const*)
+    144    0.1%    0.1%  v8::internal::HeapProfiler::is_tracking_object_moves() const
+    141    0.1%    0.1%  v8::internal::HeapObject& std::Cr::pair<v8::internal::HeapObject, int>::pair[abi:v16000]<v8::internal::HeapObject&, int&, (void*)0>(int&)
+    138    0.1%    0.1%  v8::internal::SemiSpace::age_mark() const
+    138    0.1%    0.1%  v8::internal::Bitmap::FromAddress(unsigned long)
+    137    0.1%    0.1%  v8::internal::TorqueGeneratedFixedArrayBase<v8::internal::FixedArrayBase, v8::internal::HeapObject>::length() const
+    136    0.1%    0.1%  std::Cr::__wrap_iter<v8::internal::HeapObjectAllocationTracker**>::__wrap_iter[abi:v16000](void const*, v8::internal::HeapObjectAllocationTracker**)
+    132    0.1%    0.1%  v8::internal::MarkBit::Next()
+    129    0.1%    0.1%  v8::internal::SemiSpaceNewSpace::age_mark() const
+    129    0.1%    0.1%  v8::internal::BasicMemoryChunk::AddressToMarkbitIndex(unsigned long) const
+    128    0.1%    0.1%  v8::internal::SlotBase<v8::internal::CompressedHeapObjectSlot, unsigned int, 4ul>::location() const
+    128    0.1%    0.1%  unsigned long std::Cr::__cxx_atomic_load[abi:v16000]<unsigned long>(std::Cr::__cxx_atomic_base_impl<unsigned long> const*, std::Cr::memory_order)
+    126    0.1%    0.1%  v8::internal::FullObjectSlot::FullObjectSlot(unsigned long const*)
+    126    0.1%    0.1%  v8::internal::CopyAndForwardResult v8::internal::Scavenger::PromoteObject<v8::internal::CompressedHeapObjectSlot, (v8::internal::Scavenger::PromotionHeapChoice)0>(v8::internal::Map, v8::internal::CompressedHeapObjectSlot, v8::internal::HeapObject, int, v8::internal::ObjectFields)
+    126    0.1%    0.1%  v8::internal::BasicMemoryChunk::InNewLargeObjectSpace() const
+    123    0.1%    0.1%  v8::internal::TaggedField<v8::internal::Object, 0>::Relaxed_Load(v8::internal::PtrComprCageBase, v8::internal::HeapObject, int)
+    123    0.1%    0.1%  v8::internal::HeapObject::IsNativeContext() const
+    122    0.1%    0.1%  v8::internal::Internals::IntToSmi(int)
+    122    0.1%    0.1%  v8::internal::CompressTagged(unsigned long)
+    122    0.1%    0.1%  v8::internal::BasicMemoryChunk::IsFromPage() const
+    122    0.1%    0.1%  bool IsAligned<int, int>(int, int)
+    120    0.1%    0.1%  v8::internal::Page::FromAddress(unsigned long)
+    119    0.1%    0.1%  v8::internal::MarkBit::MarkBit(unsigned int*, unsigned int)
+    118    0.1%    0.1%  v8::internal::SlotBase<v8::internal::CompressedObjectSlot, unsigned int, 4ul>::SlotBase(unsigned long)
+    117    0.1%    0.1%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::GetHeapObjectIfStrong(v8::internal::HeapObject*) const
+    116    0.1%    0.1%  v8::internal::TaggedField<v8::internal::MapWord, 0>::Acquire_Load_No_Unpack(v8::internal::PtrComprCageBase, v8::internal::HeapObject, int)
+    113    0.1%    0.1%  v8::internal::SemiSpaceNewSpace::From(v8::internal::NewSpace*)
+    113    0.1%    0.1%  v8::internal::ReadOnlyRoots::unchecked_one_pointer_filler_map() const
+    113    0.1%    0.1%  v8::internal::ReadOnlyRoots::ReadOnlyRoots(v8::internal::Heap*)
+    113    0.1%    0.1%  v8::internal::LiveObjectRange<(v8::internal::LiveObjectIterationMode)0>::iterator::AdvanceToNextValidObject()
+    112    0.1%    0.1%  v8::internal::AllocationSite::CanTrack(v8::internal::InstanceType)
+    112    0.1%    0.1%  _ZN2v84base9CmpLEImplIlmEENSt2Cr9enable_ifIXsr21is_signed_vs_unsignedIT_T0_EE5valueEbE4typeES4_S5_
+    111    0.1%    0.1%  v8::internal::Heap::CopyBlock(unsigned long, unsigned long, int)
+    111    0.1%    0.1%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckLTImpl<unsigned int, unsigned int>(unsigned int, unsigned int, char const*)
+    111    0.1%    0.1%  heap::base::Worklist<std::Cr::pair<v8::internal::HeapObject, int>, (unsigned short)256>::Local::Push(std::Cr::pair<v8::internal::HeapObject, int>)
+    110    0.1%    0.1%  v8::internal::HeapObject::map_word(v8::internal::PtrComprCageBase, v8::AcquireLoadTag) const
+    110    0.1%    0.1%  std::Cr::__to_failure_order[abi:v16000](std::Cr::memory_order)
+    110    0.1%    0.1%  bool v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::operator==<unsigned long>(v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>) const
+    109    0.1%    0.1%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckNEImpl<v8::internal::CopyAndForwardResult, v8::internal::CopyAndForwardResult>(v8::internal::CopyAndForwardResult, v8::internal::CopyAndForwardResult, char const*)
+    109    0.1%    0.1%  _ZN2v84base9CmpLEImplIimEENSt2Cr9enable_ifIXsr21is_signed_vs_unsignedIT_T0_EE5valueEbE4typeES4_S5_
+    108    0.1%    0.1%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)0, unsigned long>::IsStrongOrWeak() const
+    108    0.1%    0.1%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckNEImpl<heap::base::internal::SegmentBase*, heap::base::internal::SegmentBase*>(heap::base::internal::SegmentBase*, heap::base::internal::SegmentBase*, char const*)
+    107    0.1%    0.1%  v8::internal::EvacuationAllocator::Allocate(v8::internal::AllocationSpace, int, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment)
+    106    0.1%    0.1%  v8::internal::MemoryChunkLayout::AllocatableMemoryInDataPage()
+    106    0.1%    0.1%  v8::internal::MarkingStateBase<v8::internal::NonAtomicMarkingState, (v8::internal::AccessMode)1>::MarkBitFrom(v8::internal::BasicMemoryChunk const*, unsigned long) const
+    104    0.1%    0.1%  v8::internal::Heap::new_space()
+    103    0.1%    0.1%  v8::internal::Isolate::heap_profiler() const
+    103    0.1%    0.1%  v8::internal::Heap::OnMoveEvent(v8::internal::HeapObject, v8::internal::HeapObject, int)
+    103    0.1%    0.1%  bool v8::internal::MarkBit::Get<(v8::internal::AccessMode)1>()
+    102    0.1%    0.1%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckGEImpl<v8::internal::InstanceType, v8::internal::InstanceType>(v8::internal::InstanceType, v8::internal::InstanceType, char const*)
+    101    0.1%    0.1%  v8::internal::HeapObject::IsFixedArrayBase() const
+    100    0.1%    0.1%  v8::internal::Object::IsFeedbackCell() const
+    100    0.1%    0.1%  v8::internal::MemsetUint32(unsigned int*, unsigned int, unsigned long)
+    100    0.1%    0.1%  v8::internal::CopyAndForwardResult v8::internal::Scavenger::SemiSpaceCopyObject<v8::internal::CompressedHeapObjectSlot>(v8::internal::Map, v8::internal::CompressedHeapObjectSlot, v8::internal::HeapObject, int, v8::internal::ObjectFields)
+     99    0.1%    0.1%  v8::internal::BaseSpace::identity() const
+     99    0.1%    0.1%  heap::base::internal::SegmentBase::GetSentinelSegmentAddress()
+     98    0.1%    0.1%  v8::internal::Object::IsTaggedIndex() const
+     97    0.1%    0.1%  v8::internal::Scavenger::HandleLargeObject(v8::internal::Map, v8::internal::HeapObject, int, v8::internal::ObjectFields)
+     97    0.1%    0.1%  v8::internal::IsCodeSpaceObject(v8::internal::HeapObject)
+     96    0.1%    0.1%  void std::Cr::__cxx_atomic_store[abi:v16000]<int>(std::Cr::__cxx_atomic_base_impl<int> volatile*, int, std::Cr::memory_order)
+     96    0.1%    0.1%  v8::internal::SpaceWithLinearArea::AllocateRaw(int, v8::internal::AllocationAlignment, v8::internal::AllocationOrigin)
+     96    0.1%    0.1%  v8::internal::MemoryChunk::cast(v8::internal::BasicMemoryChunk*)
+     96    0.1%    0.1%  v8::internal::MarkCompactCollector::ProcessMarkingWorklist(unsigned long, v8::internal::MarkCompactCollector::MarkingWorklistProcessingMode)
+     96    0.1%    0.1%  bool v8::internal::Marking::IsImpossible<(v8::internal::AccessMode)1>(v8::internal::MarkBit)
+     95    0.1%    0.1%  v8::internal::AllocationMemento::AllocationMemento()
+     94    0.1%    0.1%  v8::internal::Isolate::isolate_data()
+     93    0.1%    0.1%  v8::internal::RootsTable::read_only_roots_begin() const
+     92    0.1%    0.1%  v8::internal::SlotBase<v8::internal::CompressedMaybeObjectSlot, unsigned int, 4ul>::SlotBase(unsigned long)
+     92    0.1%    0.1%  v8::internal::ReadOnlyRoots::CheckType_allocation_memento_map() const
+     92    0.1%    0.1%  v8::internal::InstanceTypeChecker::IsFeedbackCell(v8::internal::InstanceType)
+     92    0.1%    0.1%  v8::internal::Heap::InFromPage(v8::internal::MaybeObject)
+     92    0.1%    0.1%  v8::internal::ConcurrentBitmap<(v8::internal::AccessMode)1>* v8::internal::BasicMemoryChunk::marking_bitmap<(v8::internal::AccessMode)1>() const
+     91    0.1%    0.1%  v8::internal::IsReadOnlyHeapObject(v8::internal::HeapObject)
+     90    0.1%    0.1%  unsigned long v8::internal::DecompressTaggedPointer<unsigned long>(unsigned long, unsigned int)
+     90    0.1%    0.1%  std::Cr::__atomic_base<int, false>::compare_exchange_strong[abi:v16000](int&, int, std::Cr::memory_order, std::Cr::memory_order) volatile
+     89    0.1%    0.1%  v8::internal::CompactionSpaceCollection::Get(v8::internal::AllocationSpace)
+     89    0.1%    0.1%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckGEImpl<unsigned long, int>(unsigned long, int, char const*)
+     88    0.1%    0.1%  v8::internal::SlotBase<v8::internal::CompressedMaybeObjectSlot, unsigned int, 4ul>::address() const
+     88    0.1%    0.1%  v8::internal::CompressedObjectSlot::Relaxed_Load(v8::internal::PtrComprCageBase) const
+     86    0.1%    0.1%  v8::internal::HeapObject::IsContext() const
+     86    0.1%    0.1%  v8::internal::AllocationResult::FromObject(v8::internal::HeapObject)
+     86    0.1%    0.1%  unsigned int v8::base::AsAtomicImpl<int>::Acquire_Load<unsigned int>(unsigned int*)
+     86    0.1%    0.1%  bool std::Cr::atomic_compare_exchange_strong_explicit[abi:v16000]<int>(std::Cr::atomic<int> volatile*, std::Cr::atomic<int>::value_type*, std::Cr::atomic<int>::value_type, std::Cr::memory_order, std::Cr::memory_order)
+     85    0.1%    0.1%  v8::internal::ReadOnlyRoots::unchecked_the_hole_value() const
+     84    0.0%    0.1%  void v8::internal::MarkingVisitorBase<v8::internal::MainMarkingVisitor<v8::internal::MarkingState>, v8::internal::MarkingState>::VisitPointersImpl<v8::internal::CompressedObjectSlot>(v8::internal::HeapObject, v8::internal::CompressedObjectSlot, v8::internal::CompressedObjectSlot)
+     84    0.0%    0.1%  v8::internal::MarkingVisitorBase<v8::internal::MainMarkingVisitor<v8::internal::MarkingState>, v8::internal::MarkingState>::MarkObject(v8::internal::HeapObject, v8::internal::HeapObject)
+     84    0.0%    0.1%  v8::internal::IsolateData::roots()
+     83    0.0%    0.1%  v8::internal::HeapObject::IsFeedbackVector() const
+     82    0.0%    0.1%  v8::internal::PagedSpaceBase::Contains(v8::internal::Object) const
+     82    0.0%    0.1%  v8::internal::MemoryChunkLayout::ObjectStartOffsetInDataPage()
+     82    0.0%    0.1%  v8::internal::CompressedObjectSlot::contains_value(unsigned long) const
+     82    0.0%    0.1%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckNEImpl<v8::internal::Map const&, v8::internal::Map const&>(v8::internal::Map const&, v8::internal::Map const&, char const*)
+     82    0.0%    0.1%  heap::base::Worklist<std::Cr::pair<v8::internal::HeapObject, int>, (unsigned short)256>::Local::push_segment()
+     81    0.0%    0.1%  v8::internal::Object::IsJSFunction() const
+     81    0.0%    0.1%  v8::internal::HeapObject::release_compare_and_swap_map_word(v8::internal::MapWord, v8::internal::MapWord)
+     81    0.0%    0.1%  std::Cr::unique_ptr<v8::internal::IncrementalMarking, std::Cr::default_delete<v8::internal::IncrementalMarking> >::get[abi:v16000]() const
+     80    0.0%    0.1%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::GetHeapObject() const
+     80    0.0%    0.1%  v8::internal::MarkingStateBase<v8::internal::MarkingState, (v8::internal::AccessMode)0>::MarkBitFrom(v8::internal::BasicMemoryChunk const*, unsigned long) const
+     80    0.0%    0.1%  v8::internal::Map::instance_size_in_words() const
+     80    0.0%    0.1%  unsigned long v8::internal::DecompressTaggedAny<unsigned long>(unsigned long, unsigned int)     78    0.0%    0.0%  v8::internal::SlotBase<v8::internal::CompressedObjectSlot, unsigned int, 4ul>::operator<(v8::internal::SlotBase<v8::internal::CompressedObjectSlot, unsigned int, 4ul> const&) const
+     78    0.0%    0.0%  v8::internal::HandleBase::IsDereferenceAllowed() const
+     77    0.0%    0.0%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckGEImpl<unsigned long, long>(unsigned long, long, char const*)
+     76    0.0%    0.0%  void v8::internal::MarkingVisitorBase<v8::internal::MainMarkingVisitor<v8::internal::MarkingState>, v8::internal::MarkingState>::ProcessStrongHeapObject<v8::internal::CompressedHeapObjectSlot>(v8::internal::HeapObject, v8::internal::CompressedHeapObjectSlot, v8::internal::HeapObject)
+     76    0.0%    0.0%  v8::internal::HeapObject::map_slot() const
+     76    0.0%    0.0%  v8::internal::HeapObject::FromAddress(unsigned long)
+     76    0.0%    0.0%  std::Cr::vector<v8::internal::HeapObjectAllocationTracker*, std::Cr::allocator<v8::internal::HeapObjectAllocationTracker*> >::end[abi:v16000]()
+     75    0.0%    0.0%  v8::internal::SlotBase<v8::internal::CompressedObjectSlot, unsigned int, 4ul>::operator++()     75    0.0%    0.0%  v8::internal::Object::IsTheHole(v8::internal::Isolate*) const
+     74    0.0%    0.0%  v8::internal::MarkingStateBase<v8::internal::MarkingState, (v8::internal::AccessMode)0>::GreyToBlack(v8::internal::HeapObject)
+     74    0.0%    0.0%  _ZNSt2Cr4pairIN2v88internal10HeapObjectEiEC2B6v16000ILb1ELPv0EEEv
+     74    0.0%    0.0%  _ZN2v84base9CmpNEImplIiNS_8internal10HeapObjectUt_EEENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS7_S8_EE5valueEbE4typeES7_S8_
+     73    0.0%    0.0%  v8::internal::HandleScope::GetHandle(v8::internal::Isolate*, unsigned long)
+     72    0.0%    0.0%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)0, unsigned long>::GetHeapObject(v8::internal::HeapObject*) const
+     72    0.0%    0.0%  v8::internal::SpaceWithLinearArea::AllocateFastUnaligned(int, v8::internal::AllocationOrigin)
+     72    0.0%    0.0%  v8::internal::HeapObject::IsNativeContext(v8::internal::PtrComprCageBase) const
+     72    0.0%    0.0%  bool v8::base::AsAtomicImpl<int>::SetBits<unsigned int>(unsigned int*, unsigned int, unsigned int)
+     71    0.0%    0.0%  void v8::internal::IterateAndScavengePromotedObjectsVisitor::HandleSlot<v8::internal::CompressedHeapObjectSlot>(v8::internal::HeapObject, v8::internal::CompressedHeapObjectSlot, v8::internal::HeapObject)
+     71    0.0%    0.0%  v8::internal::Sweeper::RawSweep(v8::internal::Page*, v8::internal::FreeSpaceTreatmentMode, v8::internal::Sweeper::SweepingMode, v8::base::LockGuard<v8::base::Mutex, (v8::base::NullBehavior)0> const&)
+     71    0.0%    0.0%  v8::internal::InstanceTypeChecker::IsFeedbackVector(v8::internal::InstanceType)
+     71    0.0%    0.0%  _ZN2v84base9CmpLEImplImmEENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS4_S5_EE5valueEbE4typeES4_S5_
+     70    0.0%    0.0%  void std::Cr::atomic_store_explicit[abi:v16000]<int>(std::Cr::atomic<int> volatile*, std::Cr::atomic<int>::value_type, std::Cr::memory_order)
+     70    0.0%    0.0%  v8::internal::Object::IsJSObject() const
+     70    0.0%    0.0%  v8::internal::InstanceTypeChecker::IsFreeSpaceOrFiller(v8::internal::InstanceType)
+     70    0.0%    0.0%  v8::internal::CompressedObjectSlot::CompressedObjectSlot(unsigned long)
+     69    0.0%    0.0%  v8::internal::Isolate::roots_table()
+     69    0.0%    0.0%  bool v8::base::IsInRange<v8::internal::InstanceType, v8::internal::InstanceType>(v8::internal::InstanceType, v8::internal::InstanceType, v8::internal::InstanceType)
+     68    0.0%    0.0%  v8::internal::Object::IsFixedArrayBase() const
+     68    0.0%    0.0%  v8::internal::HeapObject::IsOddball() const
+     68    0.0%    0.0%  v8::internal::AllocationResult::AllocationResult()
+     68    0.0%    0.0%  std::Cr::pair<v8::internal::HeapObject, int>::operator=[abi:v16000](std::Cr::pair<v8::internal::HeapObject, int> const&)
+     67    0.0%    0.0%  v8::internal::ReadOnlyRoots::the_hole_value() const
+     66    0.0%    0.0%  unsigned int v8::base::AsAtomicImpl<int>::Release_CompareAndSwap<unsigned int>(unsigned int*, std::Cr::remove_reference<unsigned int>::type, std::Cr::remove_reference<unsigned int>::type)
+     65    0.0%    0.0%  v8::internal::heap_internals::MemoryChunk::InCodeSpace() const
+     65    0.0%    0.0%  v8::internal::HandleScope::CreateHandle(v8::internal::Isolate*, unsigned long)
+     65    0.0%    0.0%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckLEImpl<int, unsigned long>(int, unsigned long, char const*)
+     65    0.0%    0.0%  _ZN2v84base9CmpNEImplIPN4heap4base8internal11SegmentBaseES6_EENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS9_SA_EE5valueEbE4typeES9_SA_
+     64    0.0%    0.0%  v8::internal::SlotBase<v8::internal::CompressedObjectSlot, unsigned int, 4ul>::location() const
+     64    0.0%    0.0%  _ZN2v84base9CmpNEImplINS_8internal20CopyAndForwardResultES3_EENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS6_S7_EE5valueEbE4typeES6_S7_
+     63    0.0%    0.0%  v8::internal::FreeListManyCached::CheckCacheIntegrity()
+     63    0.0%    0.0%  std::Cr::vector<v8::internal::HeapObjectAllocationTracker*, std::Cr::allocator<v8::internal::HeapObjectAllocationTracker*> >::begin[abi:v16000]()
+     62    0.0%    0.0%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::GetHeapObject(v8::internal::HeapObject*) const
+     62    0.0%    0.0%  v8::internal::LinearAllocationArea::top() const
+     62    0.0%    0.0%  v8::internal::BasicMemoryChunk::ContainsLimit(unsigned long) const
+     62    0.0%    0.0%  std::Cr::__wrap_iter<v8::internal::HeapObjectAllocationTracker**>::base[abi:v16000]() const     62    0.0%    0.0%  _ZN2v84base9CmpGEImplINS_8internal12InstanceTypeES3_EENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS6_S7_EE5valueEbE4typeES6_S7_
+     61    0.0%    0.0%  v8::internal::(anonymous namespace)::FastElementsAccessor<v8::internal::(anonymous namespace)::FastHoleySmiElementsAccessor, v8::internal::(anonymous namespace)::ElementsKindTraits<(v8::internal::ElementsKind)1> >::ValidateContents(v8::internal::JSObject, unsigned long)
+     61    0.0%    0.0%  unsigned long v8::internal::DecompressTaggedAny<v8::internal::PtrComprCageBase>(v8::internal::PtrComprCageBase, unsigned int)
+     60    0.0%    0.0%  v8::internal::MapWord::FromForwardingAddress(v8::internal::HeapObject)
+     60    0.0%    0.0%  heap::base::internal::SegmentBase::IsEmpty() const
+     60    0.0%    0.0%  bool std::Cr::operator==[abi:v16000]<v8::internal::HeapObjectAllocationTracker**>(std::Cr::__wrap_iter<v8::internal::HeapObjectAllocationTracker**> const&, std::Cr::__wrap_iter<v8::internal::HeapObjectAllocationTracker**> const&)
+     60    0.0%    0.0%  _ZN2v84base9CmpLTImplIjjEENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS4_S5_EE5valueEbE4typeES4_S5_
+     59    0.0%    0.0%  v8::internal::Map::instance_size() const
+     59    0.0%    0.0%  v8::internal::BasicMemoryChunk::InReadOnlySpace() const
+     58    0.0%    0.0%  v8::internal::InstanceTypeChecker::IsSharedFunctionInfo(v8::internal::InstanceType)
+     58    0.0%    0.0%  v8::base::Acquire_Load(int const volatile*)
+     57    0.0%    0.0%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::IsStrongOrWeak() const
+     57    0.0%    0.0%  v8::internal::HeapVisitor<int, v8::internal::MainMarkingVisitor<v8::internal::MarkingState> >::Visit(v8::internal::Map, v8::internal::HeapObject)
+     56    0.0%    0.0%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckEQImpl<unsigned int, unsigned int>(unsigned int, unsigned int, char const*)
+     55    0.0%    0.0%  v8::internal::TaggedField<v8::internal::MapWord, 0>::full_to_tagged(unsigned long)
+     55    0.0%    0.0%  v8::internal::ReadOnlyHeap::Contains(v8::internal::HeapObject)
+     54    0.0%    0.0%  v8::internal::Object::IsTheHole(v8::internal::ReadOnlyRoots) const
+     54    0.0%    0.0%  v8::base::BitField<bool, 2, 1, unsigned int>::decode(unsigned int)
+     54    0.0%    0.0%  std::Cr::atomic<int> volatile* v8::base::helper::to_std_atomic<int>(int volatile*)
+     53    0.0%    0.0%  void v8::internal::JSObject::FastBodyDescriptor::IterateBody<v8::internal::MainMarkingVisitor<v8::internal::MarkingState> >(v8::internal::Map, v8::internal::HeapObject, int, v8::internal::MainMarkingVisitor<v8::internal::MarkingState>*)
+     53    0.0%    0.0%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)0, unsigned long>::IsCleared() const
+     53    0.0%    0.0%  v8::internal::MemoryAllocator::IsOutsideAllocatedSpace(unsigned long) const
+     53    0.0%    0.0%  v8::internal::IsHoleyElementsKind(v8::internal::ElementsKind)
+     53    0.0%    0.0%  v8::internal::Handle<v8::internal::Object>::operator*() const
+     52    0.0%    0.0%  v8::internal::Oddball::Oddball()
+     52    0.0%    0.0%  v8::internal::MarkingStateBase<v8::internal::MarkingState, (v8::internal::AccessMode)0>::MarkBitFrom(v8::internal::HeapObject) const
+     52    0.0%    0.0%  v8::internal::MapWord::ptr()
+     52    0.0%    0.0%  v8::internal::InstanceTypeChecker::IsOddball(v8::internal::InstanceType)
+     52    0.0%    0.0%  v8::internal::InstanceTypeChecker::InstanceRangeChecker<(v8::internal::InstanceType)270, (v8::internal::InstanceType)2152>::Check(v8::internal::InstanceType)
+     51    0.0%    0.0%  v8::internal::HeapObject::IsSharedFunctionInfo(v8::internal::PtrComprCageBase) const
+     51    0.0%    0.0%  v8::internal::Heap::InYoungGeneration(v8::internal::HeapObject)
+     51    0.0%    0.0%  long std::Cr::__cxx_atomic_fetch_add[abi:v16000]<long>(std::Cr::__cxx_atomic_base_impl<long>*, long, std::Cr::memory_order)
+     51    0.0%    0.0%  bool v8::internal::AllocationResult::To<v8::internal::HeapObject>(v8::internal::HeapObject*) const
+     50    0.0%    0.0%  v8::internal::Oddball::unchecked_cast(v8::internal::Object)
+     50    0.0%    0.0%  v8::internal::Heap::incremental_marking() const
+     50    0.0%    0.0%  v8::internal::CompressedObjectSlot::operator*() const
+     50    0.0%    0.0%  bool v8::internal::Marking::IsWhite<(v8::internal::AccessMode)0>(v8::internal::MarkBit)
+     49    0.0%    0.0%  v8::internal::TorqueGeneratedJSObject<v8::internal::JSObject, v8::internal::JSReceiver>::cast(v8::internal::Object)
+     49    0.0%    0.0%  v8::internal::MarkingStateBase<v8::internal::MarkingState, (v8::internal::AccessMode)0>::WhiteToGrey(v8::internal::HeapObject)
+     49    0.0%    0.0%  v8::internal::HeapObject::IsFeedbackVector(v8::internal::PtrComprCageBase) const
+     49    0.0%    0.0%  v8::internal::Bitmap::IndexInCell(unsigned int)
+     48    0.0%    0.0%  v8::internal::HeapObject::IsJSObject() const
+     48    0.0%    0.0%  _ZN2v84base9CmpGEImplImiEENSt2Cr9enable_ifIXsr21is_unsigned_vs_signedIT_T0_EE5valueEbE4typeES4_S5_
+     47    0.0%    0.0%  void v8::internal::IterateAndScavengePromotedObjectsVisitor::VisitPointersImpl<v8::internal::CompressedObjectSlot>(v8::internal::HeapObject, v8::internal::CompressedObjectSlot, v8::internal::CompressedObjectSlot)
+     47    0.0%    0.0%  v8::internal::SlotBase<v8::internal::FullObjectSlot, unsigned long, 8ul>::address() const
+     47    0.0%    0.0%  v8::internal::InstanceTypeChecker::IsNativeContext(v8::internal::InstanceType)
+     47    0.0%    0.0%  v8::internal::CompressedHeapObjectSlot::store(v8::internal::HeapObjectReference) const
+     46    0.0%    0.0%  void v8::base::AsAtomicImpl<int>::Relaxed_Store<unsigned int>(unsigned int*, std::Cr::remove_reference<unsigned int>::type)
+     46    0.0%    0.0%  v8::internal::ReadOnlyRoots::one_pointer_filler_map() const
+     46    0.0%    0.0%  v8::internal::HeapObject::InSharedHeap() const
+     45    0.0%    0.0%  v8::internal::TaggedIndex::IsValid(long)
+     45    0.0%    0.0%  v8::internal::PrimitiveHeapObject::PrimitiveHeapObject()
+     45    0.0%    0.0%  v8::internal::LocalAllocationBuffer::AllocateRawAligned(int, v8::internal::AllocationAlignment)
+     44    0.0%    0.0%  _ZN2v84base9CmpGEImplImlEENSt2Cr9enable_ifIXsr21is_unsigned_vs_signedIT_T0_EE5valueEbE4typeES4_S5_
+     43    0.0%    0.0%  v8::internal::PerThreadAssertScope<(v8::internal::PerThreadAssertType)2, true>::IsAllowed()     43    0.0%    0.0%  v8::internal::NonAtomicMarkingState::bitmap(v8::internal::BasicMemoryChunk const*) const
+     43    0.0%    0.0%  v8::base::Release_CompareAndSwap(int volatile*, int, int)
+     42    0.0%    0.0%  v8::internal::TaggedIndex::TaggedIndex(unsigned long)
+     42    0.0%    0.0%  v8::internal::BasicMemoryChunk::IsLargePage() const
+     41    0.0%    0.0%  v8::internal::HeapObject::IsContext(v8::internal::PtrComprCageBase) const
+     41    0.0%    0.0%  v8::internal::FixedArray::is_the_hole(v8::internal::Isolate*, int)
+     41    0.0%    0.0%  v8::base::Use::Use<int const&>(int const&)
+     40    0.0%    0.0%  v8::internal::Map::visitor_id() const
+     40    0.0%    0.0%  v8::internal::InstanceTypeChecker::IsJSObject(v8::internal::InstanceType)
+     40    0.0%    0.0%  v8::internal::HeapVisitor<int, v8::internal::MainMarkingVisitor<v8::internal::MarkingState> >::VisitJSObjectFast(v8::internal::Map, v8::internal::JSObject)
+     40    0.0%    0.0%  v8::internal::HeapObject::set_map_word(v8::internal::MapWord, v8::RelaxedStoreTag)
+     40    0.0%    0.0%  std::Cr::__atomic_base<v8::internal::BaseSpace*, false>::load[abi:v16000](std::Cr::memory_order) const
+     39    0.0%    0.0%  v8::internal::Scavenger::RememberedSetEntryNeeded(v8::internal::CopyAndForwardResult)
+     39    0.0%    0.0%  bool std::Cr::operator!=[abi:v16000]<v8::internal::HeapObjectAllocationTracker**>(std::Cr::__wrap_iter<v8::internal::HeapObjectAllocationTracker**> const&, std::Cr::__wrap_iter<v8::internal::HeapObjectAllocationTracker**> const&)
+     38    0.0%    0.0%  v8::internal::TaggedField<v8::internal::MapWord, 0>::Release_CompareAndSwap(v8::internal::HeapObject, v8::internal::MapWord, v8::internal::MapWord)
+     38    0.0%    0.0%  v8::internal::HandleBase::location() const
+     38    0.0%    0.0%  v8::internal::AllocationResult::IsFailure() const
+     37    0.0%    0.0%  v8::internal::InstanceTypeChecker::InstanceRangeChecker<(v8::internal::InstanceType)206, (v8::internal::InstanceType)215>::Check(v8::internal::InstanceType)
+     37    0.0%    0.0%  v8::internal::CopyTagged(unsigned long, unsigned long, unsigned long)
+     37    0.0%    0.0%  __tls_get_addr
+     36    0.0%    0.0%  v8::internal::TaggedField<v8::internal::Smi, 0>::location(v8::internal::HeapObject, int)
+     36    0.0%    0.0%  v8::internal::Page::OnSamePage(unsigned long, unsigned long)
+     36    0.0%    0.0%  v8::internal::InstanceTypeChecker::IsContext(v8::internal::InstanceType)
+     36    0.0%    0.0%  v8::internal::HeapObject::map_word(v8::RelaxedLoadTag) const
+     36    0.0%    0.0%  v8::internal::HeapObject::IsFeedbackCell() const
+     36    0.0%    0.0%  v8::internal::EvacuationAllocator::AllocateInLAB(int, v8::internal::AllocationAlignment)
+     36    0.0%    0.0%  v8::internal::CompressedMaybeObjectSlot::CompressedMaybeObjectSlot(unsigned long)
+     36    0.0%    0.0%  v8::base::Relaxed_Store(int volatile*, int)
+     36    0.0%    0.0%  std::Cr::__compressed_pair_elem<v8::internal::IncrementalMarking*, 0, false>::__get[abi:v16000]() const
+     36    0.0%    0.0%  std::Cr::__atomic_base<unsigned long, false>::load[abi:v16000](std::Cr::memory_order) const     36    0.0%    0.0%  heap::base::Worklist<v8::internal::HeapObject, (unsigned short)64>::Segment::Pop(v8::internal::HeapObject*)
+     36    0.0%    0.0%  bool v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::operator!=<unsigned long>(v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>) const
+     35    0.0%    0.0%  v8::internal::LinearAllocationArea::CanIncrementTop(unsigned long) const
+     35    0.0%    0.0%  v8::internal::JSObject v8::internal::HeapVisitor<int, v8::internal::MainMarkingVisitor<v8::internal::MarkingState> >::Cast<v8::internal::JSObject>(v8::internal::HeapObject)
+     35    0.0%    0.0%  v8::internal::HeapObject::IsOddball(v8::internal::PtrComprCageBase) const
+     35    0.0%    0.0%  v8::internal::HeapObject::InSharedWritableHeap() const
+     35    0.0%    0.0%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckGEImpl<int, int>(int, int, char const*)
+     35    0.0%    0.0%  std::Cr::__atomic_base<unsigned long, false>::operator unsigned long[abi:v16000]() const
+     34    0.0%    0.0%  v8::internal::TorqueGeneratedAllocationMemento<v8::internal::AllocationMemento, v8::internal::Struct>::TorqueGeneratedAllocationMemento<v8::internal::AllocationMemento>()
+     34    0.0%    0.0%  v8::internal::MarkCompactCollector::RecordSlot(v8::internal::HeapObject, v8::internal::CompressedHeapObjectSlot, v8::internal::HeapObject)
+     34    0.0%    0.0%  v8::internal::HeapObject::IsJSObject(v8::internal::PtrComprCageBase) const
+     34    0.0%    0.0%  v8::internal::BasicMemoryChunk::IsToPage() const
+     34    0.0%    0.0%  unsigned long RoundDown<unsigned long>(unsigned long, long)
+     34    0.0%    0.0%  heap::base::Worklist<v8::internal::HeapObject, (unsigned short)64>::Local::Pop(v8::internal::HeapObject*)
+     34    0.0%    0.0%  brk
+     33    0.0%    0.0%  v8::internal::TaggedIndex::value() const
+     33    0.0%    0.0%  v8::internal::LinearAllocationArea::IncrementTop(unsigned long)
+     33    0.0%    0.0%  std::Cr::__compressed_pair<v8::internal::IncrementalMarking*, std::Cr::default_delete<v8::internal::IncrementalMarking> >::first[abi:v16000]() const
+     33    0.0%    0.0%  bool v8::internal::MarkBit::Get<(v8::internal::AccessMode)0>()
+     32    0.0%    0.0%  v8::internal::TaggedField<v8::internal::MapWord, 0>::Relaxed_Store_Map_Word(v8::internal::HeapObject, v8::internal::MapWord)
+     32    0.0%    0.0%  v8::internal::PagedSpaceObjectIterator::FromCurrentPage()
+     32    0.0%    0.0%  v8::internal::HeapObject::Size(v8::internal::PtrComprCageBase) const
+     32    0.0%    0.0%  v8::internal::HeapObject::RequiredAlignment(v8::internal::Map)
+     32    0.0%    0.0%  std::Cr::__atomic_base<v8::internal::BaseSpace*, false>::operator v8::internal::BaseSpace*[abi:v16000]() const
+     32    0.0%    0.0%  std::Cr::__atomic_base<int, false>::store[abi:v16000](int, std::Cr::memory_order) volatile
+     31    0.0%    0.0%  v8::internal::TorqueGeneratedStruct<v8::internal::Struct, v8::internal::HeapObject>::TorqueGeneratedStruct<v8::internal::Struct>()
+     31    0.0%    0.0%  v8::internal::ReadOnlyRoots::CheckType_one_pointer_filler_map() const
+     31    0.0%    0.0%  v8::internal::MarkingState::IncrementLiveBytes(v8::internal::MemoryChunk*, long)
+     31    0.0%    0.0%  v8::internal::CompressedHeapObjectSlot::CompressedHeapObjectSlot<v8::internal::CompressedObjectSlot>(v8::internal::SlotBase<v8::internal::CompressedObjectSlot, unsigned int, 4ul>)
+     31    0.0%    0.0%  v8::internal::Bitmap::cells()
+     31    0.0%    0.0%  v8::internal::AllocationResult::AllocationResult(v8::internal::HeapObject)
+     31    0.0%    0.0%  v8::base::AsAtomicImpl<int>::cast_helper<unsigned int>::to_storage_type(unsigned int)
+     30    0.0%    0.0%  v8::internal::MemoryChunk::owner_identity() const
+     28    0.0%    0.0%  v8::internal::MemoryChunk::owner() const
+     28    0.0%    0.0%  v8::internal::MaybeObject::operator->() const
+     28    0.0%    0.0%  v8::internal::MaybeObject::FromObject(v8::internal::Object)
+     28    0.0%    0.0%  v8::internal::LocalHeap::VerifyCurrent()
+     28    0.0%    0.0%  v8::internal::HeapObject::IsJSFunction() const
+     28    0.0%    0.0%  v8::internal::CompressedObjectSlot::contains_map_value(unsigned long) const
+     28    0.0%    0.0%  unsigned long v8::internal::TaggedField<v8::internal::Smi, 0>::tagged_to_full<unsigned long>(unsigned long, unsigned int)
+     28    0.0%    0.0%  _ZN2v84base9CmpEQImplIjjEENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS4_S5_EE5valueEbE4typeES4_S5_
+     27    0.0%    0.0%  v8::internal::ThreadId std::Cr::__cxx_atomic_load[abi:v16000]<v8::internal::ThreadId>(std::Cr::__cxx_atomic_base_impl<v8::internal::ThreadId> const*, std::Cr::memory_order)
+     27    0.0%    0.0%  v8::internal::TaggedField<v8::internal::Object, 0>::location(v8::internal::HeapObject, int)     27    0.0%    0.0%  v8::internal::TaggedField<v8::internal::Object, 0>::address(v8::internal::HeapObject, int)
+     27    0.0%    0.0%  v8::internal::MarkingState::bitmap(v8::internal::BasicMemoryChunk const*) const
+     27    0.0%    0.0%  v8::internal::BasicMemoryChunk::InNewSpace() const
+     27    0.0%    0.0%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckNEImpl<std::Cr::unordered_map<v8::internal::AllocationSite, unsigned long, v8::internal::Object::Hasher, std::Cr::equal_to<v8::internal::AllocationSite>, std::Cr::allocator<std::Cr::pair<v8::internal::AllocationSite const, unsigned long> > >*, std::Cr::unordered_map<v8::internal::AllocationSite, unsigned long, v8::internal::Object::Hasher, std::Cr::equal_to<v8::internal::AllocationSite>, std::Cr::allocator<std::Cr::pair<v8::internal::AllocationSite const, unsigned long> > >*>(std::Cr::unordered_map<v8::internal::AllocationSite, unsigned long, v8::internal::Object::Hasher, std::Cr::equal_to<v8::internal::AllocationSite>, std::Cr::allocator<std::Cr::pair<v8::internal::AllocationSite const, unsigned long> > >*, std::Cr::unordered_map<v8::internal::AllocationSite, unsigned long, v8::internal::Object::Hasher, std::Cr::equal_to<v8::internal::AllocationSite>, std::Cr::allocator<std::Cr::pair<v8::internal::AllocationSite const, unsigned long> > >*, char const*)
+     26    0.0%    0.0%  v8::internal::MapWord::IsPacked(unsigned long)
+     26    0.0%    0.0%  v8::internal::LiveObjectRange<(v8::internal::LiveObjectIterationMode)0>::iterator::operator!=(v8::internal::LiveObjectRange<(v8::internal::LiveObjectIterationMode)0>::iterator) const
+     26    0.0%    0.0%  v8::internal::EvacuationAllocator::AllocateInNewSpace(int, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment)
+     26    0.0%    0.0%  _ZN2v84base9CmpNEImplIRKNS_8internal3MapES5_EENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS8_S9_EE5valueEbE4typeES8_S9_
+     25    0.0%    0.0%  v8::internal::HeapObject::IsJSReceiver(v8::internal::PtrComprCageBase) const
+     25    0.0%    0.0%  v8::internal::CompressedHeapObjectSlot::CompressedHeapObjectSlot<v8::internal::CompressedMaybeObjectSlot>(v8::internal::SlotBase<v8::internal::CompressedMaybeObjectSlot, unsigned int, 4ul>)
+     25    0.0%    0.0%  v8::internal::CollectorBase::local_marking_worklists()
+     25    0.0%    0.0%  unsigned char std::Cr::__cxx_atomic_load[abi:v16000]<unsigned char>(std::Cr::__cxx_atomic_base_impl<unsigned char> const*, std::Cr::memory_order)
+     24    0.0%    0.0%  v8::internal::ThreadId::ThreadId(int)
+     24    0.0%    0.0%  v8::internal::MemoryChunk::FromHeapObject(v8::internal::HeapObject)
+     24    0.0%    0.0%  v8::internal::MarkCompactCollector::IsMapOrForwarded(v8::internal::Map)
+     24    0.0%    0.0%  v8::internal::LocalHeap::ThreadState::ThreadState(unsigned char)
+     24    0.0%    0.0%  v8::internal::FixedArray::get(v8::internal::FixedArray, int, v8::internal::Isolate*)
+     23    0.0%    0.0%  v8::internal::TorqueGeneratedJSReceiver<v8::internal::JSReceiver, v8::internal::HeapObject>::TorqueGeneratedJSReceiver(unsigned long)
+     23    0.0%    0.0%  v8::internal::ReadOnlyRoots::CheckType_the_hole_value() const
+     23    0.0%    0.0%  v8::internal::LocalHeap::AtomicThreadState::load_relaxed() const
+     23    0.0%    0.0%  v8::internal::FixedArray::SizeFor(int)
+     23    0.0%    0.0%  v8::internal::BasicMemoryChunk::IsEvacuationCandidate() const
+     22    0.0%    0.0%  v8::internal::ConcurrentBitmap<(v8::internal::AccessMode)0>* v8::internal::BasicMemoryChunk::marking_bitmap<(v8::internal::AccessMode)0>() const
+     22    0.0%    0.0%  v8::internal::BasicMemoryChunk::area_start() const
+     22    0.0%    0.0%  unsigned long v8::internal::TaggedField<v8::internal::Object, 0>::tagged_to_full<v8::internal::PtrComprCageBase>(v8::internal::PtrComprCageBase, unsigned int)
+     22    0.0%    0.0%  bool v8::internal::Marking::IsBlack<(v8::internal::AccessMode)1>(v8::internal::MarkBit)
+     21    0.0%    0.0%  v8::internal::ThreadId::GetCurrentThreadId()
+     21    0.0%    0.0%  v8::internal::TaggedField<v8::internal::Smi, 0>::address(v8::internal::HeapObject, int)
+     21    0.0%    0.0%  v8::internal::ObjectVisitorWithCageBases::cage_base() const
+     21    0.0%    0.0%  v8::internal::MarkingWorklists::Local::Pop(v8::internal::HeapObject*)
+     21    0.0%    0.0%  v8::internal::MarkingVisitorBase<v8::internal::MainMarkingVisitor<v8::internal::MarkingState>, v8::internal::MarkingState>::concrete_visitor()
+     21    0.0%    0.0%  v8::internal::MarkingVisitorBase<v8::internal::MainMarkingVisitor<v8::internal::MarkingState>, v8::internal::MarkingState>::VisitMapPointer(v8::internal::HeapObject)
+     21    0.0%    0.0%  v8::internal::MarkCompactCollector::RecordSlot(v8::internal::MemoryChunk*, v8::internal::CompressedHeapObjectSlot, v8::internal::HeapObject)
+     20    0.0%    0.0%  v8::internal::TorqueGeneratedPrimitiveHeapObject<v8::internal::PrimitiveHeapObject, v8::internal::HeapObject>::TorqueGeneratedPrimitiveHeapObject<v8::internal::PrimitiveHeapObject>()
+     20    0.0%    0.0%  v8::internal::MarkingStateBase<v8::internal::MarkingState, (v8::internal::AccessMode)0>::IsWhite(v8::internal::HeapObject) const
+     20    0.0%    0.0%  v8::internal::InstanceTypeChecker::InstanceRangeChecker<(v8::internal::InstanceType)176, (v8::internal::InstanceType)195>::Check(v8::internal::InstanceType)
+     20    0.0%    0.0%  v8::internal::FixedArray::OffsetOfElementAt(int)
+     20    0.0%    0.0%  bool v8::internal::Marking::GreyToBlack<(v8::internal::AccessMode)0>(v8::internal::MarkBit)     20    0.0%    0.0%  _ZN2v84base9CmpGEImplIiiEENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS4_S5_EE5valueEbE4typeES4_S5_
+     19    0.0%    0.0%  v8::internal::MarkBitCellIterator::Advance(unsigned int)
+     19    0.0%    0.0%  v8::internal::LocalHeap::IsRunning()
+     19    0.0%    0.0%  v8::internal::BasicMemoryChunk::ShouldSkipEvacuationSlotRecording() const
+     18    0.0%    0.0%  void v8::internal::BodyDescriptorBase::IteratePointers<v8::internal::MainMarkingVisitor<v8::internal::MarkingState> >(v8::internal::HeapObject, int, int, v8::internal::MainMarkingVisitor<v8::internal::MarkingState>*)
+     18    0.0%    0.0%  v8::internal::ThreadId::operator==(v8::internal::ThreadId const&) const
+     18    0.0%    0.0%  v8::internal::Isolate::thread_id() const
+     18    0.0%    0.0%  v8::internal::IncrementalMarking::non_atomic_marking_state()
+     18    0.0%    0.0%  std::Cr::__atomic_base<v8::internal::ThreadId, false>::load[abi:v16000](std::Cr::memory_order) const
+     17    0.0%    0.0%  v8::internal::HeapObject::IsFreeSpaceOrFiller() const
+     17    0.0%    0.0%  v8::internal::HandleBase::HandleBase(unsigned long, v8::internal::Isolate*)
+     17    0.0%    0.0%  v8::base::BitField<bool, 0, 1, unsigned char>::decode(unsigned char)
+     17    0.0%    0.0%  std::Cr::unique_ptr<v8::internal::MemoryAllocator, std::Cr::default_delete<v8::internal::MemoryAllocator> >::get[abi:v16000]() const
+     17    0.0%    0.0%  std::Cr::__libcpp_numeric_limits<unsigned long, true>::max[abi:v16000]()
+     17    0.0%    0.0%  int v8::internal::HoleyElementsUsage<v8::internal::FixedArray>(v8::internal::JSObject, v8::internal::FixedArray)
+     16    0.0%    0.0%  v8::internal::TorqueGeneratedJSObject<v8::internal::JSObject, v8::internal::JSReceiver>::TorqueGeneratedJSObject(unsigned long)
+     16    0.0%    0.0%  v8::internal::SlotBase<v8::internal::CompressedHeapObjectSlot, unsigned int, 4ul>::address() const
+     16    0.0%    0.0%  v8::internal::Object::field_address(unsigned long) const
+     16    0.0%    0.0%  v8::internal::HeapObject::IsFreeSpaceOrFiller(v8::internal::PtrComprCageBase) const
+     16    0.0%    0.0%  v8::internal::DecompressTaggedSigned(unsigned int)
+     16    0.0%    0.0%  v8::internal::BasicMemoryChunk::owner() const
+     16    0.0%    0.0%  _ZN2v84base9CmpNEImplIPNSt2Cr13unordered_mapINS_8internal14AllocationSiteEmNS4_6Object6HasherENS2_8equal_toIS5_EENS2_9allocatorINS2_4pairIKS5_mEEEEEESG_EENS2_9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedISI_SJ_EE5valueEbE4typeESI_SJ_
+     15    0.0%    0.0%  v8::internal::NewSpace::Contains(v8::internal::HeapObject) const
+     15    0.0%    0.0%  v8::internal::Isolate::handle_scope_data()
+     15    0.0%    0.0%  v8::internal::HeapObject::map(v8::internal::PtrComprCageBase, v8::AcquireLoadTag) const
+     15    0.0%    0.0%  v8::internal::HeapObject::IsFeedbackCell(v8::internal::PtrComprCageBase) const
+     14    0.0%    0.0%  v8::internal::MarkingVisitorBase<v8::internal::MainMarkingVisitor<v8::internal::MarkingState>, v8::internal::MarkingState>::SynchronizePageAccess(v8::internal::HeapObject)
+     14    0.0%    0.0%  v8::internal::LocalAllocationBuffer::IsValid()
+     14    0.0%    0.0%  v8::internal::HeapObject::RawField(int) const
+     14    0.0%    0.0%  v8::internal::BasicMemoryChunk::area_end() const
+     14    0.0%    0.0%  std::Cr::pair<std::Cr::__unwrap_ref_decay<v8::internal::HeapObject&>::type, std::Cr::__unwrap_ref_decay<int&>::type> std::Cr::make_pair[abi:v16000]<v8::internal::HeapObject&, int&>(v8::internal::HeapObject&, int&)
+     14    0.0%    0.0%  bool v8::internal::Marking::IsImpossible<(v8::internal::AccessMode)0>(v8::internal::MarkBit)
+     14    0.0%    0.0%  bool v8::internal::MarkBit::Set<(v8::internal::AccessMode)0>()
+     14    0.0%    0.0%  auto v8::internal::BodyDescriptorApply<v8::internal::CallIterateBody, v8::internal::Map&, v8::internal::HeapObject&, int&, v8::internal::IterateAndScavengePromotedObjectsVisitor*&>(v8::internal::InstanceType, v8::internal::Map&, v8::internal::HeapObject&, int&, v8::internal::IterateAndScavengePromotedObjectsVisitor*&)
+     14    0.0%    0.0%  __pthread_cond_signal
+     13    0.0%    0.0%  v8::internal::Scavenger::PromotionList::Local::PushRegularObject(v8::internal::HeapObject, int)
+     13    0.0%    0.0%  v8::internal::Scavenger::PromotionList::Local::Pop(v8::internal::Scavenger::PromotionListEntry*)
+     13    0.0%    0.0%  v8::internal::PagedSpaceObjectIterator::cage_base() const
+     13    0.0%    0.0%  v8::internal::LocalHeap::Current()
+     13    0.0%    0.0%  v8::internal::LiveObjectRange<(v8::internal::LiveObjectIterationMode)0>::iterator::operator*()
+     13    0.0%    0.0%  v8::internal::InstanceTypeChecker::IsJSFunction(v8::internal::InstanceType)
+     13    0.0%    0.0%  v8::internal::HeapObject::map() const
+     13    0.0%    0.0%  v8::internal::HeapObject::IsJSReceiver() const
+     13    0.0%    0.0%  v8::internal::Heap::HasBeenSetUp() const
+     13    0.0%    0.0%  v8::internal::BasicMemoryChunk::InSharedHeap() const
+     13    0.0%    0.0%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckEQImpl<v8::internal::MemoryChunk const*, v8::internal::BasicMemoryChunk*>(v8::internal::MemoryChunk const*, v8::internal::BasicMemoryChunk*, char const*)
+     13    0.0%    0.0%  std::Cr::__compressed_pair<v8::internal::MemoryAllocator*, std::Cr::default_delete<v8::internal::MemoryAllocator> >::first[abi:v16000]() const
+     13    0.0%    0.0%  heap::base::Worklist<v8::internal::HeapObject, (unsigned short)64>::Local::Push(v8::internal::HeapObject)
+     13    0.0%    0.0%  heap::base::Worklist<std::Cr::pair<v8::internal::HeapObject, int>, (unsigned short)256>::Segment::Segment()
+     13    0.0%    0.0%  __GI___pthread_mutex_lock
+     12    0.0%    0.0%  v8::internal::ThreadId::Current()     12    0.0%    0.0%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::IsCleared() const
+     12    0.0%    0.0%  v8::internal::Scavenger::Process(v8::JobDelegate*)
+     12    0.0%    0.0%  v8::internal::Scavenger::IterateAndScavengePromotedObject(v8::internal::HeapObject, v8::internal::Map, int)
+     12    0.0%    0.0%  v8::internal::MainMarkingVisitor<v8::internal::MarkingState>::ShouldVisit(v8::internal::HeapObject)
+     12    0.0%    0.0%  v8::internal::LocalHeap::ThreadState::IsRunning() const
+     12    0.0%    0.0%  v8::internal::InstanceTypeChecker::IsFixedArrayBase(v8::internal::InstanceType)
+     12    0.0%    0.0%  v8::internal::InstanceTypeChecker::IsCode(v8::internal::InstanceType)
+     12    0.0%    0.0%  v8::internal::InstanceTypeChecker::InstanceRangeChecker<(v8::internal::InstanceType)2065, (v8::internal::InstanceType)2080>::Check(v8::internal::InstanceType)
+     12    0.0%    0.0%  v8::internal::HeapObject::IsFixedArrayBase(v8::internal::PtrComprCageBase) const
+     12    0.0%    0.0%  v8::internal::Handle<v8::internal::Object>::operator->() const
+     12    0.0%    0.0%  v8::internal::Handle<v8::internal::Object>::Handle(v8::internal::Object, v8::internal::Isolate*)
+     12    0.0%    0.0%  heap::base::Worklist<std::Cr::pair<v8::internal::HeapObject, int>, (unsigned short)256>::Segment::Pop(std::Cr::pair<v8::internal::HeapObject, int>*)
+     12    0.0%    0.0%  bool v8::internal::Marking::WhiteToGrey<(v8::internal::AccessMode)0>(v8::internal::MarkBit)     11    0.0%    0.0%  void v8::internal::MainMarkingVisitor<v8::internal::MarkingState>::RecordSlot<v8::internal::CompressedObjectSlot>(v8::internal::HeapObject, v8::internal::CompressedObjectSlot, v8::internal::HeapObject)
+     11    0.0%    0.0%  void v8::internal::MainMarkingVisitor<v8::internal::MarkingState>::RecordSlot<v8::internal::CompressedHeapObjectSlot>(v8::internal::HeapObject, v8::internal::CompressedHeapObjectSlot, v8::internal::HeapObject)
+     11    0.0%    0.0%  void v8::internal::BodyDescriptorBase::IteratePointers<v8::internal::IterateAndScavengePromotedObjectsVisitor>(v8::internal::HeapObject, int, int, v8::internal::IterateAndScavengePromotedObjectsVisitor*)
+     11    0.0%    0.0%  v8::internal::heap::ListNode<v8::internal::MemoryChunk>::next()
+     11    0.0%    0.0%  v8::internal::MarkingStateBase<v8::internal::MarkingState, (v8::internal::AccessMode)0>::AddStrongReferenceForReferenceSummarizer(v8::internal::HeapObject, v8::internal::HeapObject)
+     11    0.0%    0.0%  v8::internal::MarkBitCellIterator::Done()
+     11    0.0%    0.0%  v8::internal::InstanceTypeChecker::IsJSReceiver(v8::internal::InstanceType)
+     11    0.0%    0.0%  v8::internal::InstanceTypeChecker::InstanceRangeChecker<(v8::internal::InstanceType)267, (v8::internal::InstanceType)2152>::Check(v8::internal::InstanceType)
+     11    0.0%    0.0%  v8::internal::HeapObject::IsJSFunction(v8::internal::PtrComprCageBase) const
+     11    0.0%    0.0%  v8::internal::Heap::memory_allocator() const
+     11    0.0%    0.0%  v8::internal::HandleScope::ZapRange(unsigned long*, unsigned long*)
+     11    0.0%    0.0%  std::Cr::unique_ptr<v8::internal::LocalIsolate, std::Cr::default_delete<v8::internal::LocalIsolate> >::get[abi:v16000]() const
+     11    0.0%    0.0%  std::Cr::numeric_limits<unsigned long>::max[abi:v16000]()
+     11    0.0%    0.0%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckEQImpl<int, int>(int, int, char const*)
+     11    0.0%    0.0%  std::Cr::__atomic_base<unsigned char, false>::load[abi:v16000](std::Cr::memory_order) const     11    0.0%    0.0%  __libc_malloc
+     10    0.0%    0.0%  void v8::internal::BodyDescriptorBase::IterateJSObjectBodyImpl<v8::internal::IterateAndScavengePromotedObjectsVisitor>(v8::internal::Map, v8::internal::HeapObject, int, int, v8::internal::IterateAndScavengePromotedObjectsVisitor*)
+     10    0.0%    0.0%  v8::internal::Struct::Struct()
+     10    0.0%    0.0%  v8::internal::PagedSpaceBase::VerifyCountersAfterSweeping(v8::internal::Heap*) const
+     10    0.0%    0.0%  v8::internal::Object::unchecked_cast(v8::internal::Object)
+     10    0.0%    0.0%  v8::internal::MarkingVisitorBase<v8::internal::MainMarkingVisitor<v8::internal::MarkingState>, v8::internal::MarkingState>::VisitPointers(v8::internal::HeapObject, v8::internal::CompressedObjectSlot, v8::internal::CompressedObjectSlot)
+     10    0.0%    0.0%  v8::internal::MarkCompactCollector::RecordSlot(v8::internal::HeapObject, v8::internal::CompressedObjectSlot, v8::internal::HeapObject)
+     10    0.0%    0.0%  v8::internal::JSReceiver::JSReceiver(unsigned long)
+     10    0.0%    0.0%  v8::internal::InstanceTypeChecker::IsJSArrayBuffer(v8::internal::InstanceType)
+     10    0.0%    0.0%  std::Cr::unique_ptr<v8::internal::MarkingWorklists::Local, std::Cr::default_delete<v8::internal::MarkingWorklists::Local> >::get[abi:v16000]() const
+     10    0.0%    0.0%  std::Cr::__compressed_pair_elem<v8::internal::MemoryAllocator*, 0, false>::__get[abi:v16000]() const
+     10    0.0%    0.0%  heap::base::Worklist<v8::internal::HeapObject, (unsigned short)64>::Segment::Push(v8::internal::HeapObject)
+     10    0.0%    0.0%  __write
+      9    0.0%    0.0%  v8::internal::MarkingStateBase<v8::internal::NonAtomicMarkingState, (v8::internal::AccessMode)1>::IsBlack(v8::internal::HeapObject) const
+      9    0.0%    0.0%  v8::internal::MainMarkingVisitor<v8::internal::MarkingState>::marking_state()
+      9    0.0%    0.0%  v8::internal::HeapObject::IsCode(v8::internal::PtrComprCageBase) const
+      9    0.0%    0.0%  v8::internal::Handle<v8::internal::Object> v8::internal::handle<v8::internal::Object>(v8::internal::Object, v8::internal::Isolate*)
+      9    0.0%    0.0%  v8::base::Use::Use<int&>(int&)
+      9    0.0%    0.0%  std::Cr::__compressed_pair<v8::internal::LocalIsolate*, std::Cr::default_delete<v8::internal::LocalIsolate> >::first[abi:v16000]() const
+      8    0.0%    0.0%  v8::internal::MarkingVisitorBase<v8::internal::MainMarkingVisitor<v8::internal::MarkingState>, v8::internal::MarkingState>::AddStrongReferenceForReferenceSummarizer(v8::internal::HeapObject, v8::internal::HeapObject)
+      8    0.0%    0.0%  v8::internal::Map::ObjectFieldsFrom(v8::internal::VisitorId)
+      8    0.0%    0.0%  v8::internal::LiveObjectRange<(v8::internal::LiveObjectIterationMode)0>::iterator::operator==(v8::internal::LiveObjectRange<(v8::internal::LiveObjectIterationMode)0>::iterator) const
+      8    0.0%    0.0%  std::Cr::unique_ptr<v8::internal::MainMarkingVisitor<v8::internal::MarkingState>, std::Cr::default_delete<v8::internal::MainMarkingVisitor<v8::internal::MarkingState> > >::operator->[abi:v16000]() const
+      8    0.0%    0.0%  std::Cr::__compressed_pair_elem<v8::internal::MainMarkingVisitor<v8::internal::MarkingState>*, 0, false>::__get[abi:v16000]() const
+      8    0.0%    0.0%  std::Cr::__compressed_pair<v8::internal::MainMarkingVisitor<v8::internal::MarkingState>*, std::Cr::default_delete<v8::internal::MainMarkingVisitor<v8::internal::MarkingState> > >::first[abi:v16000]() const
+      8    0.0%    0.0%  std::Cr::__atomic_base<long, true>::fetch_add[abi:v16000](long, std::Cr::memory_order)
+      7    0.0%    0.0%  v8::internal::heap::ListNode<v8::internal::MemoryChunk>::next() const
+      7    0.0%    0.0%  v8::internal::SlotSet::Bucket::ClearCellBits(int, unsigned int)
+      7    0.0%    0.0%  v8::internal::Scavenger::PageMemoryFence(v8::internal::MaybeObject)
+      7    0.0%    0.0%  v8::internal::PagedSpaceObjectIterator::Next()
+      7    0.0%    0.0%  v8::internal::Map::IsJSObjectMap() const
+      7    0.0%    0.0%  v8::internal::HeapVisitor<int, v8::internal::ScavengeVisitor>::VisitJSObjectFast(v8::internal::Map, v8::internal::JSObject)
+      7    0.0%    0.0%  v8::internal::Handle<v8::internal::Object>::ObjectRef::ObjectRef(v8::internal::Object)
+      7    0.0%    0.0%  v8::internal::BasicMemoryChunk::heap() const
+      7    0.0%    0.0%  long std::Cr::__cxx_atomic_load[abi:v16000]<long>(std::Cr::__cxx_atomic_base_impl<long> const volatile*, std::Cr::memory_order)
+      7    0.0%    0.0%  __mprotect
+      6    0.0%    0.0%  void v8::internal::JSObject::BodyDescriptor::IterateBody<v8::internal::IterateAndScavengePromotedObjectsVisitor>(v8::internal::Map, v8::internal::HeapObject, int, v8::internal::IterateAndScavengePromotedObjectsVisitor*)
+      6    0.0%    0.0%  v8::internal::MarkingStateBase<v8::internal::MarkingState, (v8::internal::AccessMode)0>::cage_base() const
+      6    0.0%    0.0%  v8::internal::JSObject::FastBodyDescriptor::SizeOf(v8::internal::Map, v8::internal::HeapObject)
+      6    0.0%    0.0%  v8::internal::IterateAndScavengePromotedObjectsVisitor::VisitPointers(v8::internal::HeapObject, v8::internal::CompressedObjectSlot, v8::internal::CompressedObjectSlot)
+      6    0.0%    0.0%  v8::base::LockGuard<v8::base::Mutex, (v8::base::NullBehavior)0>::LockGuard(v8::base::Mutex*)
+      6    0.0%    0.0%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckLTImpl<int, int>(int, int, char const*)
+      6    0.0%    0.0%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckLEImpl<int, int>(int, int, char const*)
+      6    0.0%    0.0%  std::Cr::__compressed_pair_elem<v8::internal::LocalIsolate*, 0, false>::__get[abi:v16000]() const
+      6    0.0%    0.0%  std::Cr::__compressed_pair<v8::internal::MarkingWorklists::Local*, std::Cr::default_delete<v8::internal::MarkingWorklists::Local> >::first[abi:v16000]() const
+      6    0.0%    0.0%  heap::base::Worklist<v8::internal::HeapObject, (unsigned short)64>::Segment::Segment()
+      5    0.0%    0.0%  v8::internal::MarkBitCellIterator::CurrentCellBase()
+      5    0.0%    0.0%  v8::internal::Map::GetInObjectPropertyOffset(int) const
+      5    0.0%    0.0%  v8::internal::LocalHeap::is_main_thread() const
+      5    0.0%    0.0%  v8::internal::LiveObjectRange<(v8::internal::LiveObjectIterationMode)0>::iterator::operator++()
+      5    0.0%    0.0%  v8::internal::Isolate::thread_local_top() const
+      5    0.0%    0.0%  v8::internal::Isolate::main_thread_local_isolate()
+      5    0.0%    0.0%  v8::internal::InstanceTypeChecker::InstanceRangeChecker<(v8::internal::InstanceType)1058, (v8::internal::InstanceType)2058>::Check(v8::internal::InstanceType)
+      5    0.0%    0.0%  v8::internal::HeapVisitor<int, v8::internal::ScavengeVisitor>::Visit(v8::internal::Map, v8::internal::HeapObject)
+      5    0.0%    0.0%  v8::internal::FreeSpace::IsValid()
+      5    0.0%    0.0%  v8::internal::FreeSpace v8::base::bit_cast<v8::internal::FreeSpace, v8::internal::Object>(v8::internal::Object const&)
+      5    0.0%    0.0%  std::Cr::__compressed_pair_elem<v8::internal::MarkingWorklists::Local*, 0, false>::__get[abi:v16000]() const
+      5    0.0%    0.0%  heap::base::Worklist<v8::internal::HeapObject, (unsigned short)64>::Local::pop_segment()
+      5    0.0%    0.0%  heap::base::Worklist<std::Cr::pair<v8::internal::HeapObject, int>, (unsigned short)256>::Segment* std::Cr::__cxx_atomic_load[abi:v16000]<heap::base::Worklist<std::Cr::pair<v8::internal::HeapObject, int>, (unsigned short)256>::Segment*>(std::Cr::__cxx_atomic_base_impl<heap::base::Worklist<std::Cr::pair<v8::internal::HeapObject, int>, (unsigned short)256>::Segment*> const*, std::Cr::memory_order)
+      5    0.0%    0.0%  _ZN2v84base9CmpLEImplIiiEENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS4_S5_EE5valueEbE4typeES4_S5_
+      5    0.0%    0.0%  _ZN2v84base9CmpEQImplIPKNS_8internal11MemoryChunkEPNS2_16BasicMemoryChunkEEENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedISA_SB_EE5valueEbE4typeESA_SB_
+      4    0.0%    0.0%  void v8::internal::HeapObject::IterateBodyFast<v8::internal::IterateAndScavengePromotedObjectsVisitor>(v8::internal::Map, int, v8::internal::IterateAndScavengePromotedObjectsVisitor*)
+      4    0.0%    0.0%  void v8::internal::CallIterateBody::apply<v8::internal::JSObject::BodyDescriptor, v8::internal::IterateAndScavengePromotedObjectsVisitor>(v8::internal::Map, v8::internal::HeapObject, int, v8::internal::IterateAndScavengePromotedObjectsVisitor*)
+      4    0.0%    0.0%  v8::internal::MarkingWorklists::Local::Push(v8::internal::HeapObject)
+      4    0.0%    0.0%  v8::internal::Map::IsJSArrayBufferMap() const
+      4    0.0%    0.0%  v8::internal::MainMarkingVisitor<v8::internal::MarkingState>::retaining_path_mode()
+      4    0.0%    0.0%  v8::internal::JSObject::GetHeaderSize(v8::internal::Map)
+      4    0.0%    0.0%  v8::internal::JSObject v8::internal::HeapVisitor<int, v8::internal::ScavengeVisitor>::Cast<v8::internal::JSObject>(v8::internal::HeapObject)
+      4    0.0%    0.0%  v8::internal::Isolate::main_thread_local_heap()
+      4    0.0%    0.0%  v8::internal::InstanceTypeChecker::IsJSApiObject(v8::internal::InstanceType)
+      4    0.0%    0.0%  v8::internal::Heap::isolate() const
+      4    0.0%    0.0%  v8::internal::EvacuationAllocator::NewLocalAllocationBuffer()
+      4    0.0%    0.0%  v8::internal::ConcurrentBitmap<(v8::internal::AccessMode)1>::ClearCellRangeRelaxed(unsigned int, unsigned int)
+      4    0.0%    0.0%  v8::internal::BasicMemoryChunk::FromAddress(unsigned long)
+      4    0.0%    0.0%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckLEImpl<unsigned int, unsigned int>(unsigned int, unsigned int, char const*)
+      4    0.0%    0.0%  std::Cr::__atomic_base<long, false>::load[abi:v16000](std::Cr::memory_order) const volatile      4    0.0%    0.0%  heap::base::Worklist<std::Cr::pair<v8::internal::HeapObject, int>, (unsigned short)256>::Local::pop_segment()
+      4    0.0%    0.0%  heap::base::Worklist<std::Cr::pair<v8::internal::HeapObject, int>, (unsigned short)256>::Local::Pop(std::Cr::pair<v8::internal::HeapObject, int>*)
+      3    0.0%    0.0%  void v8::internal::ScavengeVisitor::VisitPointersImpl<v8::internal::CompressedObjectSlot>(v8::internal::HeapObject, v8::internal::CompressedObjectSlot, v8::internal::CompressedObjectSlot)
+      3    0.0%    0.0%  v8::internal::SlotSet::Bucket::cell(int)
+      3    0.0%    0.0%  v8::internal::RootsTable::operator[](v8::internal::RootIndex) const
+      3    0.0%    0.0%  v8::internal::MarkBitCellIterator::CurrentCell()
+      3    0.0%    0.0%  v8::internal::Map::GetInObjectPropertiesStartInWords() const
+      3    0.0%    0.0%  v8::internal::LocalHeap::IsHandleDereferenceAllowed()
+      3    0.0%    0.0%  v8::internal::JSObject::JSObject(unsigned long)
+      3    0.0%    0.0%  v8::internal::IsJSReceiver_NonInline(v8::internal::HeapObject)
+      3    0.0%    0.0%  v8::internal::IsJSObject_NonInline(v8::internal::HeapObject)
+      3    0.0%    0.0%  v8::internal::HeapVisitor<int, v8::internal::ScavengeVisitor>::Visit(v8::internal::HeapObject)
+      3    0.0%    0.0%  v8::internal::Heap::GetFillToAlign(unsigned long, v8::internal::AllocationAlignment)
+      3    0.0%    0.0%  v8::internal::CollectorBase::marking_state()
+      3    0.0%    0.0%  v8::internal::Bitmap::CellAlignIndex(unsigned int)
+      3    0.0%    0.0%  v8::base::Mutex::Lock()
+      3    0.0%    0.0%  v8::base::Mutex::AssertUnheldAndMark()
+      3    0.0%    0.0%  v8::base::Mutex::AssertHeldAndUnmark()
+      3    0.0%    0.0%  v8::base::Acquire_Load(long const volatile*)
+      3    0.0%    0.0%  std::Cr::map<v8::internal::HeapObject, int, v8::internal::Object::Comparer, std::Cr::allocator<std::Cr::pair<v8::internal::HeapObject const, int> > >* v8::internal::MemoryChunk::invalidated_slots<(v8::internal::RememberedSetType)0>()
+      3    0.0%    0.0%  operator new(unsigned long)
+      3    0.0%    0.0%  heap::base::Worklist<v8::internal::HeapObject, (unsigned short)64>::Local::push_segment()
+      3    0.0%    0.0%  __GI___pthread_mutex_unlock
+      3    0.0%    0.0%  _ZN2v84base9CmpLEImplIjjEENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS4_S5_EE5valueEbE4typeES4_S5_
+      3    0.0%    0.0%  _IO_fwrite
+      2    0.0%    0.0%  v8::internal::SnapshotByteSource::CopySlots(unsigned int*, int)
+      2    0.0%    0.0%  v8::internal::SlotSet::bucket(unsigned long)
+      2    0.0%    0.0%  v8::internal::SlotSet::CheckPossiblyEmptyBuckets(unsigned long, v8::internal::PossiblyEmptyBuckets*)
+      2    0.0%    0.0%  v8::internal::ReadOnlyRoots::CheckType_undefined_value() const
+      2    0.0%    0.0%  v8::internal::PerThreadAssertScopeDebugOnly<(v8::internal::PerThreadAssertType)0, false>::PerThreadAssertScopeDebugOnly()
+      2    0.0%    0.0%  v8::internal::MemsetTagged(unsigned int*, v8::internal::Object, unsigned long)
+      2    0.0%    0.0%  v8::internal::MarkingStateBase<v8::internal::MarkingState, (v8::internal::AccessMode)0>::IsImpossible(v8::internal::HeapObject) const
+      2    0.0%    0.0%  v8::internal::Map::inobject_properties_start_or_constructor_function_index() const
+      2    0.0%    0.0%  v8::internal::IterateAndScavengePromotedObjectsVisitor::IterateAndScavengePromotedObjectsVisitor(v8::internal::Scavenger*, bool)
+      2    0.0%    0.0%  v8::internal::HeapVisitor<int, v8::internal::MainMarkingVisitor<v8::internal::MarkingState> >::ShouldVisitMapPointer()
+      2    0.0%    0.0%  v8::internal::HandleBase::HandleBase(unsigned long*)
+      2    0.0%    0.0%  v8::internal::Handle<v8::internal::Object>::ObjectRef::operator->()
+      2    0.0%    0.0%  v8::internal::GetIsolateFromWritableObject(v8::internal::HeapObject)
+      2    0.0%    0.0%  v8::internal::FreeSpace::unchecked_cast(v8::internal::Object)
+      2    0.0%    0.0%  v8::internal::FreeSpace::next()
+      2    0.0%    0.0%  v8::internal::FreeSpace::FreeSpace()
+      2    0.0%    0.0%  v8::internal::CollectorBase::heap() const
+      2    0.0%    0.0%  v8::base::LockNativeHandle(pthread_mutex_t*)
+      2    0.0%    0.0%  v8::base::LockGuard<v8::base::Mutex, (v8::base::NullBehavior)0>::~LockGuard()
+      2    0.0%    0.0%  unsigned long std::Cr::__cxx_atomic_fetch_add[abi:v16000]<unsigned long>(std::Cr::__cxx_atomic_base_impl<unsigned long>*, unsigned long, std::Cr::memory_order)
+      2    0.0%    0.0%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckGTImpl<unsigned int, unsigned int>(unsigned int, unsigned int, char const*)
+      2    0.0%    0.0%  std::Cr::basic_ostream<char, std::Cr::char_traits<char> >::sentry::~sentry()
+      2    0.0%    0.0%  long* v8::base::AsAtomicImpl<long>::to_storage_addr<v8::internal::SlotSet::Bucket*>(v8::internal::SlotSet::Bucket**)
+      2    0.0%    0.0%  heap::base::Worklist<v8::internal::HeapObject, (unsigned short)64>::Local::PublishPushSegment()
+      2    0.0%    0.0%  __libc_free
+      2    0.0%    0.0%  _ZN2v84base9CmpEQImplIiiEENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS4_S5_EE5valueEbE4typeES4_S5_
+      1    0.0%    0.0%  void v8::internal::SlotSet::StoreBucket<(v8::internal::AccessMode)0>(unsigned long, v8::internal::SlotSet::Bucket*)
+      1    0.0%    0.0%  void v8::internal::ScavengeVisitor::VisitHeapObjectImpl<v8::internal::CompressedObjectSlot>(v8::internal::CompressedObjectSlot, v8::internal::HeapObject)
+      1    0.0%    0.0%  void v8::internal::BodyDescriptorBase::IteratePointers<v8::internal::ScavengeVisitor>(v8::internal::HeapObject, int, int, v8::internal::ScavengeVisitor*)
+      1    0.0%    0.0%  v8::internal::wasm::WasmFeatures::None()
+      1    0.0%    0.0%  v8::internal::interpreter::Register::Register(int)
+      1    0.0%    0.0%  v8::internal::heap::List<v8::internal::MemoryChunk>::Contains(v8::internal::MemoryChunk*) const
+      1    0.0%    0.0%  v8::internal::compiler::SimplifiedOperatorGlobalCache::BooleanNotOperator::BooleanNotOperator()
+      1    0.0%    0.0%  v8::internal::compiler::PipelineStatistics*& std::Cr::__compressed_pair<v8::internal::compiler::PipelineStatistics*, std::Cr::default_delete<v8::internal::compiler::PipelineStatistics> >::__compressed_pair[abi:v16000]<v8::internal::compiler::PipelineStatistics*&, std::Cr::__value_init_tag>(std::Cr::__value_init_tag&&)
+      1    0.0%    0.0%  v8::internal::compiler::Pipeline::NewCompilationJob(v8::internal::Isolate*, v8::internal::Handle<v8::internal::JSFunction>, v8::internal::CodeKind, bool, v8::internal::BytecodeOffset, v8::internal::JavaScriptFrame*)
+      1    0.0%    0.0%  v8::internal::compiler::Operator1<v8::internal::compiler::StackCheckKind, v8::internal::compiler::OpEqualTo<v8::internal::compiler::StackCheckKind>, v8::internal::compiler::OpHash<v8::internal::compiler::StackCheckKind> >::Operator1(unsigned short, v8::base::Flags<v8::internal::compiler::Operator::Property, unsigned char>, char const*, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, v8::internal::compiler::StackCheckKind, v8::internal::compiler::OpEqualTo<v8::internal::compiler::StackCheckKind> const&, v8::internal::compiler::OpHash<v8::internal::compiler::StackCheckKind> const&)
+      1    0.0%    0.0%  v8::internal::compiler::MachineOperatorGlobalCache::F32x4RelaxedMinOperator::F32x4RelaxedMinOperator()
+      1    0.0%    0.0%  v8::internal::ZoneAllocator<v8::internal::compiler::CompilationDependency const*>::ZoneAllocator(v8::internal::Zone*)
+      1    0.0%    0.0%  v8::internal::TurboAssembler::Move(v8::internal::Register, v8::internal::Handle<v8::internal::HeapObject>, v8::internal::RelocInfo::Mode)
+      1    0.0%    0.0%  v8::internal::TorqueGeneratedString<v8::internal::String, v8::internal::Name>::length() const
+      1    0.0%    0.0%  v8::internal::TorqueGeneratedSeqString<v8::internal::SeqString, v8::internal::String>::TorqueGeneratedSeqString(unsigned long)
+      1    0.0%    0.0%  v8::internal::TorqueGeneratedSeqOneByteString<v8::internal::SeqOneByteString, v8::internal::SeqString>::unchecked_cast(v8::internal::Object)
+      1    0.0%    0.0%  v8::internal::TorqueGeneratedJSReceiver<v8::internal::JSReceiver, v8::internal::HeapObject>::cast(v8::internal::Object)
+      1    0.0%    0.0%  v8::internal::TorqueGeneratedJSFunction<v8::internal::JSFunction, v8::internal::JSFunctionOrBoundFunctionOrWrappedFunction>::TorqueGeneratedJSFunction(unsigned long)
+      1    0.0%    0.0%  v8::internal::TaggedField<v8::internal::Smi, 4>::address(v8::internal::HeapObject, int)
+      1    0.0%    0.0%  v8::internal::TaggedField<v8::internal::Smi, 4>::Relaxed_Load(v8::internal::HeapObject, int)
+      1    0.0%    0.0%  v8::internal::TaggedField<v8::internal::Object, 8>::load(v8::internal::HeapObject, int)
+      1    0.0%    0.0%  v8::internal::StringTable::StringTable(v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::StringTable::Data::slot(v8::internal::InternalIndex) const
+      1    0.0%    0.0%  v8::internal::StringShape::set_valid()
+      1    0.0%    0.0%  v8::internal::StringShape::IsSequential() const
+      1    0.0%    0.0%  v8::internal::StringHasher::AddCharacterCore(unsigned int, unsigned short)
+      1    0.0%    0.0%  v8::internal::StaticCallInterfaceDescriptor<v8::internal::StoreBaselineDescriptor>::GetParameterCount()
+      1    0.0%    0.0%  v8::internal::SpaceWithLinearArea::top() const
+      1    0.0%    0.0%  v8::internal::SpaceWithLinearArea::InvokeAllocationObservers(unsigned long, unsigned long, unsigned long, unsigned long)
+      1    0.0%    0.0%  v8::internal::SourceRangeScope::SourceRangeScope(v8::internal::Scanner const*, v8::internal::SourceRange*)
+      1    0.0%    0.0%  v8::internal::SnapshotByteSource::GetInt()
+      1    0.0%    0.0%  v8::internal::SlotSet::Bucket::cells()
+      1    0.0%    0.0%  v8::internal::SlotSet::Bucket* v8::internal::SlotSet::LoadBucket<(v8::internal::AccessMode)0>(v8::internal::SlotSet::Bucket**)
+      1    0.0%    0.0%  v8::internal::SlotSet* v8::base::AsAtomicImpl<long>::Acquire_Load<v8::internal::SlotSet*>(v8::internal::SlotSet**)
+      1    0.0%    0.0%  v8::internal::SlotBase<v8::internal::FullObjectSlot, unsigned long, 8ul>::operator+(int) const
+      1    0.0%    0.0%  v8::internal::SemiSpaceNewSpace::UpdateLinearAllocationArea(unsigned long)
+      1    0.0%    0.0%  v8::internal::SemiSpaceNewSpace::EnsureAllocation(int, v8::internal::AllocationAlignment, v8::internal::AllocationOrigin, int*)
+      1    0.0%    0.0%  v8::internal::SemiSpace::AddRangeToActiveSystemPages(unsigned long, unsigned long)
+      1    0.0%    0.0%  v8::internal::Scavenger::PromotionList::Local::ShouldEagerlyProcessPromotionList() const
+      1    0.0%    0.0%  v8::internal::ScavengeVisitor::VisitPointers(v8::internal::HeapObject, v8::internal::CompressedObjectSlot, v8::internal::CompressedObjectSlot)
+      1    0.0%    0.0%  v8::internal::Scanner::ScanString()::$_4::operator()(unsigned int) const
+      1    0.0%    0.0%  v8::internal::Runtime_StoreGlobalICNoFeedback_Miss(int, unsigned long*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::RootsTable::IsRootHandleLocation(unsigned long*, v8::internal::RootIndex*) const
+      1    0.0%    0.0%  v8::internal::RootVisitor::VisitRootPointer(v8::internal::Root, char const*, v8::internal::FullObjectSlot)
+      1    0.0%    0.0%  v8::internal::RelocInfo::IsNoInfo(v8::internal::RelocInfo::Mode)
+      1    0.0%    0.0%  v8::internal::ReadOnlyRoots::hash_seed() const
+      1    0.0%    0.0%  v8::internal::ReadOnlyRoots::CheckType_descriptor_array_map() const
+      1    0.0%    0.0%  v8::internal::PropertyArray::SizeFor(int)
+      1    0.0%    0.0%  v8::internal::PreparseDataBuilder::ByteData::Add(unsigned char)
+      1    0.0%    0.0%  v8::internal::PossiblyEmptyBuckets::IsAllocated()
+      1    0.0%    0.0%  v8::internal::PointersUpdatingVisitor::UpdateRootSlotInternal(v8::internal::PtrComprCageBase, v8::internal::OffHeapCompressedObjectSlot)
+      1    0.0%    0.0%  v8::internal::PerThreadAssertScope<(v8::internal::PerThreadAssertType)3, true>::IsAllowed()      1    0.0%    0.0%  v8::internal::PerThreadAssertScope<(v8::internal::PerThreadAssertType)0, false>::~PerThreadAssertScope()
+      1    0.0%    0.0%  v8::internal::ParserBase<v8::internal::PreParser>::ParseBindingPattern()
+      1    0.0%    0.0%  v8::internal::PagedSpaceBase::RelinkFreeListCategories(v8::internal::Page*)
+      1    0.0%    0.0%  v8::internal::PagedSpaceBase::EnsureAllocation(int, v8::internal::AllocationAlignment, v8::internal::AllocationOrigin, int*)
+      1    0.0%    0.0%  v8::internal::PagedSpaceBase::DecrementCommittedPhysicalMemory(unsigned long)
+      1    0.0%    0.0%  v8::internal::PagedSpaceBase::AccountedFree(unsigned long, unsigned long)
+      1    0.0%    0.0%  v8::internal::PageIteratorImpl<v8::internal::Page>::PageIteratorImpl(v8::internal::PageIteratorImpl<v8::internal::Page> const&)
+      1    0.0%    0.0%  v8::internal::Operand::Operand(v8::internal::Label*, int)
+      1    0.0%    0.0%  v8::internal::ObjectVisitor::~ObjectVisitor()
+      1    0.0%    0.0%  v8::internal::ObjectVisitor::ObjectVisitor()
+      1    0.0%    0.0%  v8::internal::Object::IsPropertyCell() const
+      1    0.0%    0.0%  v8::internal::Object::IsBytecodeArray() const
+      1    0.0%    0.0%  v8::internal::NumberDictionaryBaseShape::IsMatch(unsigned int, v8::internal::Object)
+      1    0.0%    0.0%  v8::internal::NewSpace::SupportsAllocationObserver() const
+      1    0.0%    0.0%  v8::internal::MemoryChunk::MemoryChunk(v8::internal::Heap*, v8::internal::BaseSpace*, unsigned long, unsigned long, unsigned long, v8::internal::VirtualMemory, v8::internal::Executability, v8::internal::PageSize)
+      1    0.0%    0.0%  v8::internal::MemoryAllocator::AllocateAlignedMemory(unsigned long, unsigned long, unsigned long, v8::internal::Executability, void*, v8::internal::VirtualMemory*)
+      1    0.0%    0.0%  v8::internal::Map::set_constructor_or_back_pointer(v8::internal::Object, v8::internal::WriteBarrierMode)
+      1    0.0%    0.0%  v8::internal::Map::instance_descriptors(v8::internal::PtrComprCageBase, v8::RelaxedLoadTag) const
+      1    0.0%    0.0%  v8::internal::Map::WrapFieldType(v8::internal::Isolate*, v8::internal::Handle<v8::internal::FieldType>)
+      1    0.0%    0.0%  v8::internal::Map::ConcurrentIsMap(v8::internal::PtrComprCageBase, v8::internal::Object const&) const
+      1    0.0%    0.0%  v8::internal::LookupIterator::LookupIterator(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Name>, unsigned long, v8::internal::Handle<v8::internal::Object>, v8::internal::LookupIterator::Configuration)
+      1    0.0%    0.0%  v8::internal::Logger::CodeCreateEvent(v8::internal::LogEventListener::CodeTag, v8::internal::Handle<v8::internal::AbstractCode>, char const*)
+      1    0.0%    0.0%  v8::internal::LocalIsolate::heap()
+      1    0.0%    0.0%  v8::internal::LocalAllocationBuffer::TryMerge(v8::internal::LocalAllocationBuffer*)
+      1    0.0%    0.0%  v8::internal::Isolate::roots_table() const
+      1    0.0%    0.0%  v8::internal::Isolate::root(v8::internal::RootIndex) const
+      1    0.0%    0.0%  v8::internal::Isolate::heap()
+      1    0.0%    0.0%  v8::internal::Isolate::builtin_table()
+      1    0.0%    0.0%  v8::internal::Isolate::AddCrashKey(v8::CrashKeyId, std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> > const&)
+      1    0.0%    0.0%  v8::internal::IsSmiElementsKind(v8::internal::ElementsKind)
+      1    0.0%    0.0%  v8::internal::IsHeapNumber_NonInline(v8::internal::HeapObject)
+      1    0.0%    0.0%  v8::internal::InternalIndex::as_int() const
+      1    0.0%    0.0%  v8::internal::InstanceTypeChecker::IsHeapNumber(v8::internal::InstanceType)
+      1    0.0%    0.0%  v8::internal::InstanceTypeChecker::InstanceRangeChecker<(v8::internal::InstanceType)139, (v8::internal::InstanceType)140>::Check(v8::internal::InstanceType)
+      1    0.0%    0.0%  v8::internal::IC::nexus()
+      1    0.0%    0.0%  v8::internal::HeapObjectReference::From(v8::internal::Object, v8::internal::HeapObjectReferenceType)
+      1    0.0%    0.0%  v8::internal::HeapObject::IsUndefined(v8::internal::ReadOnlyRoots) const
+      1    0.0%    0.0%  v8::internal::HeapObject::IsStoreHandler() const
+      1    0.0%    0.0%  v8::internal::HeapObject::IsSeqOneByteString() const
+      1    0.0%    0.0%  v8::internal::HeapObject::IsHashTable() const
+      1    0.0%    0.0%  v8::internal::HeapObject::IsEmbedderDataArray(v8::internal::PtrComprCageBase) const
+      1    0.0%    0.0%  v8::internal::HeapObject::IsBytecodeArray() const
+      1    0.0%    0.0%  v8::internal::Heap::tracer()
+      1    0.0%    0.0%  v8::internal::Heap::SizeOfObjects()
+      1    0.0%    0.0%  v8::internal::Heap::IsShared()
+      1    0.0%    0.0%  v8::internal::Heap::InYoungGeneration(v8::internal::Object)
+      1    0.0%    0.0%  v8::internal::HashTableBase::SetNumberOfElements(int)
+      1    0.0%    0.0%  v8::internal::HashTableBase::ElementAdded()
+      1    0.0%    0.0%  v8::internal::HandleScopeImplementer::blocks()
+      1    0.0%    0.0%  v8::internal::HandleScope::Extend(v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Handle<v8::internal::SharedFunctionInfo>::operator->() const
+      1    0.0%    0.0%  v8::internal::Handle<v8::internal::Object> v8::internal::interpreter::ConstantArrayBuilder::Entry::ToHandle<v8::internal::Isolate>(v8::internal::Isolate*) const
+      1    0.0%    0.0%  v8::internal::Handle<v8::internal::NumberDictionary>::operator->() const
+      1    0.0%    0.0%  v8::internal::Handle<v8::internal::NumberDictionary>::ObjectRef::ObjectRef(v8::internal::NumberDictionary)
+      1    0.0%    0.0%  v8::internal::Handle<v8::internal::Map>::ObjectRef::ObjectRef(v8::internal::Map)
+      1    0.0%    0.0%  v8::internal::Handle<v8::internal::HeapObject>::operator*() const
+      1    0.0%    0.0%  v8::internal::GetHoleyElementsKind(v8::internal::ElementsKind)
+      1    0.0%    0.0%  v8::internal::GCTracer::StopInSafepoint()
+      1    0.0%    0.0%  v8::internal::FullObjectSlot::operator*() const
+      1    0.0%    0.0%  v8::internal::FreeSpace::cast(v8::internal::HeapObject)
+      1    0.0%    0.0%  v8::internal::FreeListManyCached::Free(unsigned long, unsigned long, v8::internal::FreeMode)
+      1    0.0%    0.0%  v8::internal::FreeListMany::SelectFreeListCategoryType(unsigned long)
+      1    0.0%    0.0%  v8::internal::FreeListCategory::available() const
+      1    0.0%    0.0%  v8::internal::FreeList::number_of_categories()
+      1    0.0%    0.0%  v8::internal::FreeList::Available()
+      1    0.0%    0.0%  v8::internal::Factory::New(v8::internal::Handle<v8::internal::Map>, v8::internal::AllocationType)
+      1    0.0%    0.0%  v8::internal::Dictionary<v8::internal::NumberDictionary, v8::internal::NumberDictionaryShape>::Dictionary(unsigned long)
+      1    0.0%    0.0%  v8::internal::Deserializer<v8::internal::Isolate>::PostProcessNewObject(v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::HeapObject>, v8::internal::SnapshotSpace)
+      1    0.0%    0.0%  v8::internal::Deserializer<v8::internal::Isolate>::GetAndResetNextReferenceType()
+      1    0.0%    0.0%  v8::internal::Deserializer<v8::internal::Isolate>::DisableGCStats::DisableGCStats()
+      1    0.0%    0.0%  v8::internal::DescriptorLookupCache::Update(v8::internal::Map, v8::internal::Name, int)
+      1    0.0%    0.0%  v8::internal::DescriptorArray::number_of_descriptors() const
+      1    0.0%    0.0%  v8::internal::DescriptorArray::Sort()
+      1    0.0%    0.0%  v8::internal::CombinationAssertScope<v8::internal::PerThreadAssertScopeDebugOnly<(v8::internal::PerThreadAssertType)1, false> >::~CombinationAssertScope()
+      1    0.0%    0.0%  v8::internal::Code::Code(unsigned long)
+      1    0.0%    0.0%  v8::internal::ByteArray::GetDataStartAddress()
+      1    0.0%    0.0%  v8::internal::Builtins::name(v8::internal::Builtin)
+      1    0.0%    0.0%  v8::internal::Builtins::code(v8::internal::Builtin)
+      1    0.0%    0.0%  v8::internal::BasicMemoryChunk::set_owner(v8::internal::BaseSpace*)
+      1    0.0%    0.0%  v8::internal::BaseSpace::heap() const
+      1    0.0%    0.0%  v8::internal::Assembler::emit_cmp(v8::internal::Register, v8::internal::Immediate, int)
+      1    0.0%    0.0%  v8::internal::Arguments<(v8::internal::ArgumentsType)1>::Arguments(int, unsigned long*)
+      1    0.0%    0.0%  v8::internal::AllocationResult::Failure()
+      1    0.0%    0.0%  v8::internal::AllocationCounter::IsActive() const
+      1    0.0%    0.0%  v8::internal::AllocationCounter::AdvanceAllocationObservers(unsigned long)
+      1    0.0%    0.0%  v8::internal::(anonymous namespace)::ElementsAccessorBase<v8::internal::(anonymous namespace)::DictionaryElementsAccessor, v8::internal::(anonymous namespace)::ElementsKindTraits<(v8::internal::ElementsKind)13> >::Add(v8::internal::Handle<v8::internal::JSObject>, unsigned int, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, unsigned int)
+      1    0.0%    0.0%  v8::internal::(anonymous namespace)::DeleteProperty(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, v8::internal::LanguageMode)
+      1    0.0%    0.0%  v8::base::time_internal::TimeBase<v8::base::Time>::TimeBase(long)
+      1    0.0%    0.0%  v8::base::internal::OptionalStorageBase<v8::base::LockGuard<v8::base::Mutex, (v8::base::NullBehavior)0>, false>::OptionalStorageBase()
+      1    0.0%    0.0%  v8::base::internal::OptionalStorage<v8::base::SharedMutexGuard<(v8::base::MutexSharedType)0, (v8::base::NullBehavior)0>, false, false>::~OptionalStorage()
+      1    0.0%    0.0%  v8::base::Vector<char const>::begin() const
+      1    0.0%    0.0%  v8::base::Use::Use<v8::internal::AllocationOrigin&>(v8::internal::AllocationOrigin&)
+      1    0.0%    0.0%  v8::base::Use::Use<bool>(bool&&)
+      1    0.0%    0.0%  v8::base::UnlockNativeHandle(pthread_mutex_t*)
+      1    0.0%    0.0%  v8::base::SeqCst_MemoryFence()
+      1    0.0%    0.0%  v8::base::RingBuffer<double>::Push(double const&)
+      1    0.0%    0.0%  v8::base::RegionAllocator::FreeListAddRegion(v8::base::RegionAllocator::Region*)
+      1    0.0%    0.0%  v8::base::Optional<v8::internal::compiler::NativeContextRef>::Optional()
+      1    0.0%    0.0%  v8::base::Optional<heap::base::ActiveSystemPages>::operator bool() const
+      1    0.0%    0.0%  v8::base::Mutex::Unlock()
+      1    0.0%    0.0%  v8::base::LockGuard<v8::base::Mutex, (v8::base::NullBehavior)0>::has_mutex() const
+      1    0.0%    0.0%  v8::base::Flags<v8::internal::compiler::CheckBoundsFlag, int>::Flags(v8::internal::compiler::CheckBoundsFlag)
+      1    0.0%    0.0%  v8::base::Flags<v8::internal::BasicMemoryChunk::Flag, unsigned long>::without(v8::internal::BasicMemoryChunk::Flag) const
+      1    0.0%    0.0%  v8::base::Flags<v8::internal::BasicMemoryChunk::Flag, unsigned long>::operator~() const
+      1    0.0%    0.0%  v8::base::Double::IsSpecial() const
+      1    0.0%    0.0%  v8::base::BoundedPageAllocator::SetPermissions(void*, unsigned long, v8::PageAllocator::Permission)
+      1    0.0%    0.0%  v8::base::BitField<v8::internal::VariableAllocationInfo, 12, 2, unsigned int>::decode(unsigned int)
+      1    0.0%    0.0%  v8::base::BitField<bool, 5, 1, unsigned int>::decode(unsigned int)
+      1    0.0%    0.0%  v8::base::BitField<bool, 3, 1, unsigned int>::decode(unsigned int)
+      1    0.0%    0.0%  v8::base::BitField<bool, 1, 1, unsigned int>::is_valid(bool)
+      1    0.0%    0.0%  v8::base::BitField<bool, 0, 1, unsigned long>::encode(bool)
+      1    0.0%    0.0%  v8::base::BitField<bool, 0, 1, unsigned int>::encode(bool)
+      1    0.0%    0.0%  v8::base::AsAtomicImpl<long>::cast_helper<unsigned long>::to_storage_type(unsigned long)
+      1    0.0%    0.0%  v8::base::AddressRegion::contains(unsigned long, unsigned long) const
+      1    0.0%    0.0%  v8::base::AddressRegion::AddressRegion(unsigned long, unsigned long)
+      1    0.0%    0.0%  v8::base::AddressRegion::AddressRegion()
+      1    0.0%    0.0%  v8::Maybe<bool> v8::Just<bool, (void*)0>(bool&&)
+      1    0.0%    0.0%  unsigned long v8::internal::TaggedField<v8::internal::Smi, 4>::tagged_to_full<unsigned long>(unsigned long, unsigned int)
+      1    0.0%    0.0%  unsigned long std::Cr::__cxx_atomic_fetch_sub[abi:v16000]<unsigned long>(std::Cr::__cxx_atomic_base_impl<unsigned long>*, unsigned long, std::Cr::memory_order)
+      1    0.0%    0.0%  unsigned int v8::internal::SlotSet::Bucket::LoadCell<(v8::internal::AccessMode)0>(int)
+      1    0.0%    0.0%  u_getUnicodeProperties_71
+      1    0.0%    0.0%  std::Cr::vector<v8::internal::interpreter::ConstantArrayBuilder::Entry, v8::internal::ZoneAllocator<v8::internal::interpreter::ConstantArrayBuilder::Entry> >::max_size() const
+      1    0.0%    0.0%  std::Cr::vector<v8::internal::Handle<v8::internal::HeapObject>, std::Cr::allocator<v8::internal::Handle<v8::internal::HeapObject> > >::__alloc[abi:v16000]()
+      1    0.0%    0.0%  std::Cr::vector<v8::internal::AllocationCounter::AllocationObserverCounter, std::Cr::allocator<v8::internal::AllocationCounter::AllocationObserverCounter> >::capacity[abi:v16000]() const
+      1    0.0%    0.0%  std::Cr::vector<std::Cr::unique_ptr<v8::internal::Scavenger, std::Cr::default_delete<v8::internal::Scavenger> >, std::Cr::allocator<std::Cr::unique_ptr<v8::internal::Scavenger, std::Cr::default_delete<v8::internal::Scavenger> > > >::__swap_out_circular_buffer(std::Cr::__split_buffer<std::Cr::unique_ptr<v8::internal::Scavenger, std::Cr::default_delete<v8::internal::Scavenger> >, std::Cr::allocator<std::Cr::unique_ptr<v8::internal::Scavenger, std::Cr::default_delete<v8::internal::Scavenger> > >&>&)
+      1    0.0%    0.0%  std::Cr::unordered_map<v8::internal::compiler::PropertyAccessTarget, v8::internal::compiler::PropertyAccessInfo, v8::internal::compiler::PropertyAccessTarget::Hash, v8::internal::compiler::PropertyAccessTarget::Equal, v8::internal::ZoneAllocator<std::Cr::pair<v8::internal::compiler::PropertyAccessTarget const, v8::internal::compiler::PropertyAccessInfo> > >::unordered_map(unsigned long, v8::internal::compiler::PropertyAccessTarget::Hash const&, v8::internal::compiler::PropertyAccessTarget::Equal const&, v8::internal::ZoneAllocator<std::Cr::pair<v8::internal::compiler::PropertyAccessTarget const, v8::internal::compiler::PropertyAccessInfo> > const&)
+      1    0.0%    0.0%  std::Cr::unordered_map<v8::internal::BasicMemoryChunk const*, unsigned long, v8::internal::BasicMemoryChunk::Hasher, std::Cr::equal_to<v8::internal::BasicMemoryChunk const*>, std::Cr::allocator<std::Cr::pair<v8::internal::BasicMemoryChunk const* const, unsigned long> > >::operator[](v8::internal::BasicMemoryChunk const* const&)
+      1    0.0%    0.0%  std::Cr::unique_ptr<v8::internal::ConcurrentMarking::TaskState, std::Cr::default_delete<v8::internal::ConcurrentMarking::TaskState> >::operator->[abi:v16000]() const
+      1    0.0%    0.0%  std::Cr::unique_ptr<std::Cr::__hash_node_base<std::Cr::__hash_node<std::Cr::__hash_value_type<v8::internal::compiler::PropertyAccessTarget, v8::internal::compiler::PropertyAccessInfo>, void*>*>* [], std::Cr::__bucket_list_deallocator<v8::internal::ZoneAllocator<std::Cr::__hash_node_base<std::Cr::__hash_node<std::Cr::__hash_value_type<v8::internal::compiler::PropertyAccessTarget, v8::internal::compiler::PropertyAccessInfo>, void*>*>*> > >::get_deleter[abi:v16000]() const
+      1    0.0%    0.0%  std::Cr::shared_ptr<v8::internal::Counters>::shared_ptr[abi:v16000](std::Cr::shared_ptr<v8::internal::Counters> const&)
+      1    0.0%    0.0%  std::Cr::ostreambuf_iterator<char, std::Cr::char_traits<char> > std::Cr::__pad_and_output<char, std::Cr::char_traits<char> >(std::Cr::ostreambuf_iterator<char, std::Cr::char_traits<char> >, char const*, char const*, char const*, std::Cr::ios_base&, char)
+      1    0.0%    0.0%  std::Cr::locale::__imp::has_facet(long) const
+      1    0.0%    0.0%  std::Cr::ios_base::rdbuf[abi:v16000]() const
+      1    0.0%    0.0%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >::__is_long[abi:v16000]() const
+      1    0.0%    0.0%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckNEImpl<unsigned long, int>(unsigned long, int, char const*)
+      1    0.0%    0.0%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckLEImpl<char, char>(char, char, char const*)
+      1    0.0%    0.0%  std::Cr::basic_ostream<char, std::Cr::char_traits<char> >::sentry::sentry(std::Cr::basic_ostream<char, std::Cr::char_traits<char> >&)
+      1    0.0%    0.0%  std::Cr::basic_ostream<char, std::Cr::char_traits<char> >& std::Cr::operator<< <std::Cr::char_traits<char> >(std::Cr::basic_ostream<char, std::Cr::char_traits<char> >&, char)
+      1    0.0%    0.0%  std::Cr::atomic<long> const volatile* v8::base::helper::to_std_atomic_const<long>(long const volatile*)
+      1    0.0%    0.0%  std::Cr::atomic<heap::base::Worklist<v8::internal::HeapObject, (unsigned short)64>::Segment*> const* v8::base::AsAtomicPtr<heap::base::Worklist<v8::internal::HeapObject, (unsigned short)64>::Segment*>(heap::base::Worklist<v8::internal::HeapObject, (unsigned short)64>::Segment* const*)
+      1    0.0%    0.0%  std::Cr::allocator<std::Cr::__tree_node<v8::base::RegionAllocator::Region*, void*> >::max_size[abi:v16000]() const
+      1    0.0%    0.0%  std::Cr::__wrap_iter<std::Cr::pair<void (*)(void*), void*>*>::__wrap_iter[abi:v16000](void const*, std::Cr::pair<void (*)(void*), void*>*)
+      1    0.0%    0.0%  std::Cr::__tuple_leaf<0ul, v8::internal::BasicMemoryChunk const* const&, false>::get[abi:v16000]()
+      1    0.0%    0.0%  std::Cr::__tree_iterator<v8::base::RegionAllocator::Region*, std::Cr::__tree_node<v8::base::RegionAllocator::Region*, void*>*, long> std::Cr::__tree<v8::base::RegionAllocator::Region*, v8::base::RegionAllocator::SizeAddressOrder, std::Cr::allocator<v8::base::RegionAllocator::Region*> >::__lower_bound<v8::base::RegionAllocator::Region*>(v8::base::RegionAllocator::Region* const&, std::Cr::__tree_node<v8::base::RegionAllocator::Region*, void*>*, std::Cr::__tree_end_node<std::Cr::__tree_node_base<void*>*>*)
+      1    0.0%    0.0%  std::Cr::__tree<std::Cr::__value_type<unsigned long, std::Cr::pair<unsigned long, v8::internal::wasm::NativeModule*> >, std::Cr::__map_value_compare<unsigned long, std::Cr::__value_type<unsigned long, std::Cr::pair<unsigned long, v8::internal::wasm::NativeModule*> >, std::Cr::less<unsigned long>, true>, std::Cr::allocator<std::Cr::__value_type<unsigned long, std::Cr::pair<unsigned long, v8::internal::wasm::NativeModule*> > > >::size[abi:v16000]() const
+      1    0.0%    0.0%  std::Cr::__shared_count::__release_shared[abi:v16000]()
+      1    0.0%    0.0%  std::Cr::__next_prime(unsigned long)
+      1    0.0%    0.0%  std::Cr::__murmur2_or_cityhash<unsigned long, 64ul>::operator()(void const*, unsigned long)      1    0.0%    0.0%  std::Cr::__murmur2_or_cityhash<unsigned long, 64ul>::__hash_len_16(unsigned long, unsigned long)
+      1    0.0%    0.0%  std::Cr::__hash_table<std::Cr::__hash_value_type<v8::internal::HeapObject, v8::internal::Map>, std::Cr::__unordered_map_hasher<v8::internal::HeapObject, std::Cr::__hash_value_type<v8::internal::HeapObject, v8::internal::Map>, v8::internal::Object::Hasher, std::Cr::equal_to<v8::internal::HeapObject>, true>, std::Cr::__unordered_map_equal<v8::internal::HeapObject, std::Cr::__hash_value_type<v8::internal::HeapObject, v8::internal::Map>, std::Cr::equal_to<v8::internal::HeapObject>, v8::internal::Object::Hasher, true>, std::Cr::allocator<std::Cr::__hash_value_type<v8::internal::HeapObject, v8::internal::Map> > >::__hash_table()
+      1    0.0%    0.0%  std::Cr::__constrain_hash[abi:v16000](unsigned long, unsigned long)
+      1    0.0%    0.0%  std::Cr::__compressed_pair_elem<std::Cr::__hash_node_base<std::Cr::__hash_node<std::Cr::__hash_value_type<v8::internal::HeapObject, v8::internal::Map>, void*>*>**, 0, false>::__get[abi:v16000]()
+      1    0.0%    0.0%  std::Cr::__compressed_pair<unsigned long*, std::Cr::allocator<unsigned long> >::first[abi:v16000]() const
+      1    0.0%    0.0%  std::Cr::__compressed_pair<std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >::__rep, std::Cr::allocator<char> >::first[abi:v16000]() const
+      1    0.0%    0.0%  std::Cr::__atomic_base<unsigned char const*, false>::load[abi:v16000](std::Cr::memory_order) const
+      1    0.0%    0.0%  long v8::base::bit_cast<long, unsigned long>(unsigned long const&)
+      1    0.0%    0.0%  long std::Cr::atomic_load_explicit[abi:v16000]<long>(std::Cr::atomic<long> const volatile*, std::Cr::memory_order)
+      1    0.0%    0.0%  long std::Cr::__libcpp_atomic_refcount_decrement[abi:v16000]<long>(long&)
+      1    0.0%    0.0%  icu_71::StringPiece::StringPiece(char const*)
+      1    0.0%    0.0%  heap::base::internal::SegmentBase::Size() const
+      1    0.0%    0.0%  heap::base::Worklist<v8::internal::HeapObject, (unsigned short)64>::set_top(heap::base::Worklist<v8::internal::HeapObject, (unsigned short)64>::Segment*)
+      1    0.0%    0.0%  heap::base::Worklist<v8::internal::HeapObject, (unsigned short)64>::Segment::next() const
+      1    0.0%    0.0%  heap::base::Worklist<v8::internal::HeapObject, (unsigned short)64>::Pop(heap::base::Worklist<v8::internal::HeapObject, (unsigned short)64>::Segment**)
+      1    0.0%    0.0%  heap::base::Worklist<std::Cr::pair<v8::internal::HeapObject, int>, (unsigned short)256>::Size() const
+      1    0.0%    0.0%  heap::base::Worklist<std::Cr::pair<v8::internal::HeapObject, int>, (unsigned short)256>::Segment::next() const
+      1    0.0%    0.0%  heap::base::Worklist<std::Cr::pair<v8::internal::HeapObject, int>, (unsigned short)256>::Push(heap::base::Worklist<std::Cr::pair<v8::internal::HeapObject, int>, (unsigned short)256>::Segment*)
+      1    0.0%    0.0%  heap::base::Worklist<std::Cr::pair<v8::internal::HeapObject, int>, (unsigned short)256>::Pop(heap::base::Worklist<std::Cr::pair<v8::internal::HeapObject, int>, (unsigned short)256>::Segment**)
+      1    0.0%    0.0%  heap::base::Worklist<std::Cr::pair<v8::internal::HeapObject, int>, (unsigned short)256>::Local::PublishPushSegment()
+      1    0.0%    0.0%  heap::base::Worklist<std::Cr::pair<v8::internal::HeapObject, int>, (unsigned short)256>::Local::IsGlobalEmpty() const
+      1    0.0%    0.0%  double v8::internal::ReadMaybeUnalignedValue<double>(unsigned long)
+      1    0.0%    0.0%  double v8::base::RingBuffer<double>::Sum<v8::internal::GCTracer::AverageSurvivalRatio() const::$_1>(v8::internal::GCTracer::AverageSurvivalRatio() const::$_1, double const&) const
+      1    0.0%    0.0%  decltype(nullptr)&& std::Cr::__compressed_pair<v8::internal::AllocationCounter::AllocationObserverCounter*, std::Cr::allocator<v8::internal::AllocationCounter::AllocationObserverCounter> >::__compressed_pair[abi:v16000]<decltype(nullptr), std::Cr::__default_init_tag>(std::Cr::__default_init_tag&&)
+      1    0.0%    0.0%  bool v8::internal::Marking::IsBlack<(v8::internal::AccessMode)0>(v8::internal::MarkBit)
+      1    0.0%    0.0%  bool v8::base::IsInRange<unsigned char, unsigned char>(unsigned char, unsigned char, unsigned char)
+      1    0.0%    0.0%  bool std::Cr::__cxx_atomic_load[abi:v16000]<bool>(std::Cr::__cxx_atomic_base_impl<bool> const*, std::Cr::memory_order)
+      1    0.0%    0.0%  bool std::Cr::__cxx_atomic_compare_exchange_weak[abi:v16000]<long>(std::Cr::__cxx_atomic_base_impl<long>*, long*, long, std::Cr::memory_order, std::Cr::memory_order)
+      1    0.0%    0.0%  __GI___pthread_mutex_trylock
+      1    0.0%    0.0%  _ZNSt2Cr22__compressed_pair_elemIPPN2v88internal4wasm8WasmCodeELi0ELb0EEC2B6v16000IDnvEEOT_      1    0.0%    0.0%  _ZN2v84base9CmpLTImplIiiEENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS4_S5_EE5valueEbE4typeES4_S5_
+      1    0.0%    0.0%  _ZN2v84base9CmpLEImplIhhEENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS4_S5_EE5valueEbE4typeES4_S5_
+      1    0.0%    0.0%  _ZN2v84base9CmpEQImplIimEENSt2Cr9enable_ifIXsr21is_signed_vs_unsignedIT_T0_EE5valueEbE4typeES4_S5_
+      1    0.0%    0.0%  _IO_setb
+      1    0.0%    0.0%  _IO_getc
+
+ [Summary]:
+   ticks  total  nonlib   name
+   3452    2.0%    2.2%  JavaScript
+  156042   92.3%   97.8%  C++
+  61919   36.6%   38.8%  GC
+   9570    5.7%          Shared libraries
+     22    0.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+   5481    5.5%    3.2%  v8::internal::CheckObjectType(unsigned long, unsigned long, unsigned long)
+   4564    4.6%    2.7%  v8::internal::Runtime_NewArray(int, unsigned long*, v8::internal::Isolate*)
+   3607    3.6%    2.1%  v8::internal::TaggedField<v8::internal::MapWord, 0>::Relaxed_Load_Map_Word(v8::internal::PtrComprCageBase, v8::internal::HeapObject)
+   3240    3.3%    1.9%  v8::internal::Map v8::base::bit_cast<v8::internal::Map, v8::internal::Object>(v8::internal::Object const&)
+   3146    3.2%    1.9%  v8::internal::Runtime_SetKeyedProperty(int, unsigned long*, v8::internal::Isolate*)
+   3110    3.1%    1.8%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::ptr() const
+   2879    2.9%    1.7%  v8::internal::GetPtrComprCageBaseSlow(v8::internal::HeapObject)
+   2548    2.6%    1.5%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::TaggedImpl(unsigned long)
+   2389    2.4%    1.4%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckLEImpl<v8::internal::InstanceType, v8::internal::InstanceType>(v8::internal::InstanceType, v8::internal::InstanceType, char const*)
+   2385    2.4%    1.4%  _ZN2v84base9CmpLEImplINS_8internal12InstanceTypeES3_EENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS6_S7_EE5valueEbE4typeES6_S7_
+   2184    2.2%    1.3%  short std::Cr::__cxx_atomic_load[abi:v16000]<short>(std::Cr::__cxx_atomic_base_impl<short> const volatile*, std::Cr::memory_order)
+   2128    2.2%    1.3%  v8::internal::GetIsolateFromHeapObject(v8::internal::HeapObject, v8::internal::Isolate**)
+   2045    2.1%    1.2%  v8::internal::Object::Object(unsigned long)
+   1956    2.0%    1.2%  v8::internal::TorqueGeneratedString<v8::internal::String, v8::internal::Name>::cast(v8::internal::Object)
+   1707    1.7%    1.0%  v8::internal::GetPtrComprCageBase(v8::internal::HeapObject)
+   1700    1.7%    1.0%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::IsStrong() const
+   1670    1.7%    1.0%  v8::internal::HeapObject::map_word(v8::internal::PtrComprCageBase, v8::RelaxedLoadTag) const
+   1495    1.5%    0.9%  v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*)
+   1421    1.4%    0.8%  int std::Cr::__cxx_atomic_load[abi:v16000]<int>(std::Cr::__cxx_atomic_base_impl<int> const volatile*, std::Cr::memory_order)
+   1365    1.4%    0.8%  v8::internal::MapWord::ToMap() const
+   1364    1.4%    0.8%  v8::internal::HeapObject::HeapObject(unsigned long)
+   1354    1.4%    0.8%  unsigned int v8::base::AsAtomicImpl<int>::Relaxed_Load<unsigned int>(unsigned int*)
+   1238    1.3%    0.7%  v8::internal::MapWord::MapWord(unsigned long)
+   1180    1.2%    0.7%  v8::internal::Smi::value() const
+   1141    1.2%    0.7%  v8::internal::HeapObject::map(v8::internal::PtrComprCageBase) const
+   1130    1.1%    0.7%  v8::internal::heap_internals::MemoryChunk::InReadOnlySpace() const
+   1129    1.1%    0.7%  v8::internal::FlagValue<bool>::operator bool() const
+   1064    1.1%    0.6%  v8::base::Relaxed_Load(short const volatile*)
+   1048    1.1%    0.6%  v8::internal::TorqueGeneratedMap<v8::internal::Map, v8::internal::HeapObject>::unchecked_cast(v8::internal::Object)
+   1012    1.0%    0.6%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::IsSmi() const
+    988    1.0%    0.6%  v8::internal::Smi::Smi(unsigned long)
+    978    1.0%    0.6%  short std::Cr::atomic_load_explicit[abi:v16000]<short>(std::Cr::atomic<short> const volatile*, std::Cr::memory_order)
+    932    0.9%    0.6%  unsigned long v8::internal::DecompressTaggedPointer<v8::internal::PtrComprCageBase>(v8::internal::PtrComprCageBase, unsigned int)
+    913    0.9%    0.5%  v8::internal::TaggedField<v8::internal::MapWord, 0>::location(v8::internal::HeapObject, int)
+    900    0.9%    0.5%  v8::internal::Smi::IsValid(long)
+    862    0.9%    0.5%  v8::base::Relaxed_Load(int const volatile*)
+    840    0.8%    0.5%  v8::internal::HeapObject::address() const
+    834    0.8%    0.5%  unsigned long v8::internal::TaggedField<v8::internal::MapWord, 0>::tagged_to_full<v8::internal::PtrComprCageBase>(v8::internal::PtrComprCageBase, unsigned int)
+    798    0.8%    0.5%  std::Cr::__atomic_base<short, false>::load[abi:v16000](std::Cr::memory_order) const volatile
+    739    0.7%    0.4%  std::Cr::__atomic_base<int, false>::load[abi:v16000](std::Cr::memory_order) const volatile
+    733    0.7%    0.4%  _ZN2v84base9CmpEQImplIbbEENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS4_S5_EE5valueEbE4typeES4_S5_
+    722    0.7%    0.4%  v8::internal::heap_internals::MemoryChunk::GetFlags() const
+    687    0.7%    0.4%  v8::internal::String::String(unsigned long)
+    678    0.7%    0.4%  v8::internal::InstanceTypeChecker::InstanceRangeChecker<(v8::internal::InstanceType)0, (v8::internal::InstanceType)127>::Check(v8::internal::InstanceType)
+    678    0.7%    0.4%  v8::base::AsAtomicImpl<int>::cast_helper<unsigned int>::to_return_type(int)
+    668    0.7%    0.4%  v8::internal::PtrComprCageBase::PtrComprCageBase(unsigned long)
+    661    0.7%    0.4%  v8::internal::SmiTagging<4ul>::IsValidSmi(long)
+    661    0.7%    0.4%  v8::internal::Map::instance_type() const
+    654    0.7%    0.4%  v8::internal::TorqueGeneratedPrimitiveHeapObject<v8::internal::PrimitiveHeapObject, v8::internal::HeapObject>::TorqueGeneratedPrimitiveHeapObject(unsigned long)
+    647    0.7%    0.4%  v8::internal::TorqueGeneratedString<v8::internal::String, v8::internal::Name>::TorqueGeneratedString(unsigned long)
+    644    0.7%    0.4%  v8::internal::heap_internals::MemoryChunk::FromHeapObject(v8::internal::HeapObject)
+    641    0.6%    0.4%  int std::Cr::atomic_load_explicit[abi:v16000]<int>(std::Cr::atomic<int> const volatile*, std::Cr::memory_order)
+    636    0.6%    0.4%  v8::internal::PtrComprCageBase::address() const
+    632    0.6%    0.4%  v8::internal::Smi::FromInt(int)
+    616    0.6%    0.4%  v8::internal::GetPtrComprCageBaseFromOnHeapAddress(unsigned long)
+    599    0.6%    0.4%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckEQImpl<bool, bool>(bool, bool, char const*)
+    576    0.6%    0.3%  v8::internal::InstanceTypeChecker::IsString(v8::internal::InstanceType)
+    562    0.6%    0.3%  v8::internal::TorqueGeneratedName<v8::internal::Name, v8::internal::PrimitiveHeapObject>::TorqueGeneratedName(unsigned long)
+    558    0.6%    0.3%  int* v8::base::AsAtomicImpl<int>::to_storage_addr<unsigned int>(unsigned int*)
+    557    0.6%    0.3%  v8::internal::InstanceTypeChecker::InstanceRangeChecker<(v8::internal::InstanceType)0, (v8::internal::InstanceType)131>::Check(v8::internal::InstanceType)
+    554    0.6%    0.3%  v8::internal::Object::Object()
+    552    0.6%    0.3%  v8::internal::InstanceTypeChecker::InstanceRangeChecker<(v8::internal::InstanceType)0, (v8::internal::InstanceType)128>::Check(v8::internal::InstanceType)
+    544    0.6%    0.3%  v8::internal::TaggedField<v8::internal::MapWord, 0>::address(v8::internal::HeapObject, int)    544    0.6%    0.3%  v8::internal::Map::Map()
+    520    0.5%    0.3%  v8::internal::GetPtrComprCageBaseAddress(v8::internal::PtrComprCageBase)
+    507    0.5%    0.3%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::IsHeapObject() const
+    506    0.5%    0.3%  v8::internal::Internals::IsValidSmi(long)
+    504    0.5%    0.3%  v8::internal::HeapObject::HeapObject()
+    481    0.5%    0.3%  v8::internal::GetPtrComprCageBaseAddress(unsigned long)
+    478    0.5%    0.3%  v8::internal::HeapObject::IsPrimitiveHeapObject() const
+    463    0.5%    0.3%  v8::internal::InstanceTypeChecker::IsName(v8::internal::InstanceType)
+    446    0.5%    0.3%  v8::internal::HeapObject::IsString(v8::internal::PtrComprCageBase) const
+    418    0.4%    0.2%  std::Cr::atomic<int> const volatile* v8::base::helper::to_std_atomic_const<int>(int const volatile*)
+    411    0.4%    0.2%  v8::internal::InstanceTypeChecker::IsPrimitiveHeapObject(v8::internal::InstanceType)
+    410    0.4%    0.2%  v8::internal::Internals::SmiValue(unsigned long)
+    387    0.4%    0.2%  unsigned long RoundDown<4294967296l, unsigned long>(unsigned long)
+    370    0.4%    0.2%  v8::internal::SmiTagging<4ul>::SmiToInt(unsigned long)
+    325    0.3%    0.2%  std::Cr::atomic<short> const volatile* v8::base::helper::to_std_atomic_const<short>(short const volatile*)
+    318    0.3%    0.2%  v8::internal::HeapObject::IsString() const
+    310    0.3%    0.2%  v8::internal::Name::Name(unsigned long)
+    298    0.3%    0.2%  v8::internal::HeapObject::IsName() const
+    296    0.3%    0.2%  v8::internal::Object::IsMap() const
+    292    0.3%    0.2%  v8::internal::HeapObject::IsPrimitiveHeapObject(v8::internal::PtrComprCageBase) const
+    291    0.3%    0.2%  v8::internal::TorqueGeneratedMap<v8::internal::Map, v8::internal::HeapObject>::TorqueGeneratedMap<v8::internal::Map>()
+    285    0.3%    0.2%  v8::internal::HeapObject::IsName(v8::internal::PtrComprCageBase) const
+    205    0.2%    0.1%  v8::internal::PtrComprCageBase::PtrComprCageBase(v8::internal::Isolate const*)
+    198    0.2%    0.1%  v8::internal::PrimitiveHeapObject::PrimitiveHeapObject(unsigned long)
+    175    0.2%    0.1%  v8::internal::IntToSmi(int)
+    172    0.2%    0.1%  v8::internal::IsPrimitiveHeapObject_NonInline(v8::internal::HeapObject)
+    172    0.2%    0.1%  v8::internal::IsName_NonInline(v8::internal::HeapObject)
+    166    0.2%    0.1%  v8::internal::heap_internals::MemoryChunk::GetHeap()
+    165    0.2%    0.1%  v8::internal::Object::IsFeedbackVector() const
+    165    0.2%    0.1%  v8::internal::Object::IsContext() const
+    158    0.2%    0.1%  v8::internal::IsString_NonInline(v8::internal::HeapObject)
+    133    0.1%    0.1%  v8::internal::HeapObject::IsMap() const
+    122    0.1%    0.1%  v8::internal::Internals::IntToSmi(int)
+    113    0.1%    0.1%  v8::internal::InstanceTypeChecker::IsMap(v8::internal::InstanceType)
+    101    0.1%    0.1%  v8::internal::HeapObject::IsFixedArrayBase() const
+    100    0.1%    0.1%  v8::internal::Object::IsFeedbackCell() const
+    100    0.1%    0.1%  v8::internal::Isolate::cage_base() const
+     98    0.1%    0.1%  v8::internal::Object::IsTaggedIndex() const
+     96    0.1%    0.1%  v8::internal::HeapObject::cast(v8::internal::Object)
+     94    0.1%    0.1%  v8::internal::Isolate::FromHeap(v8::internal::Heap const*)
+     92    0.1%    0.1%  v8::internal::InstanceTypeChecker::IsFeedbackCell(v8::internal::InstanceType)
+     85    0.1%    0.1%  v8::internal::HeapObject::IsContext() const
+     83    0.1%    0.0%  v8::internal::HeapObject::IsFeedbackVector() const
+     81    0.1%    0.0%  v8::internal::Object::IsJSFunction() const
+     77    0.1%    0.0%  v8::internal::Isolate::isolate_data() const
+     74    0.1%    0.0%  v8::internal::HeapObject::IsMap(v8::internal::PtrComprCageBase) const
+     72    0.1%    0.0%  v8::internal::IsolateData::cage_base() const
+     71    0.1%    0.0%  v8::internal::InstanceTypeChecker::IsFeedbackVector(v8::internal::InstanceType)
+     70    0.1%    0.0%  v8::internal::Object::IsJSObject() const
+     68    0.1%    0.0%  v8::internal::Object::IsFixedArrayBase() const
+     61    0.1%    0.0%  bool v8::base::IsInRange<v8::internal::InstanceType, v8::internal::InstanceType>(v8::internal::InstanceType, v8::internal::InstanceType, v8::internal::InstanceType)
+     52    0.1%    0.0%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckGEImpl<v8::internal::InstanceType, v8::internal::InstanceType>(v8::internal::InstanceType, v8::internal::InstanceType, char const*)
+     49    0.0%    0.0%  v8::internal::HeapObject::IsFeedbackVector(v8::internal::PtrComprCageBase) const
+     45    0.0%    0.0%  v8::internal::TaggedIndex::IsValid(long)
+     42    0.0%    0.0%  v8::internal::TaggedIndex::TaggedIndex(unsigned long)
+     41    0.0%    0.0%  v8::internal::HeapObject::IsContext(v8::internal::PtrComprCageBase) const
+     37    0.0%    0.0%  v8::internal::InstanceTypeChecker::InstanceRangeChecker<(v8::internal::InstanceType)206, (v8::internal::InstanceType)215>::Check(v8::internal::InstanceType)
+     36    0.0%    0.0%  v8::internal::InstanceTypeChecker::IsContext(v8::internal::InstanceType)
+     36    0.0%    0.0%  v8::internal::HeapObject::IsFeedbackCell() const
+     33    0.0%    0.0%  v8::internal::TaggedIndex::value() const
+     31    0.0%    0.0%  v8::internal::InstanceTypeChecker::InstanceRangeChecker<(v8::internal::InstanceType)270, (v8::internal::InstanceType)2152>::Check(v8::internal::InstanceType)
+     28    0.0%    0.0%  v8::internal::HeapObject::IsJSFunction() const
+     23    0.0%    0.0%  v8::internal::InstanceTypeChecker::IsJSObject(v8::internal::InstanceType)
+     23    0.0%    0.0%  _ZN2v84base9CmpGEImplINS_8internal12InstanceTypeES3_EENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS6_S7_EE5valueEbE4typeES6_S7_
+     20    0.0%    0.0%  v8::internal::InstanceTypeChecker::InstanceRangeChecker<(v8::internal::InstanceType)176, (v8::internal::InstanceType)195>::Check(v8::internal::InstanceType)
+     20    0.0%    0.0%  v8::internal::HeapObject::IsJSObject() const
+     16    0.0%    0.0%  v8::internal::Runtime_BytecodeBudgetInterruptWithStackCheck(int, unsigned long*, v8::internal::Isolate*)
+     15    0.0%    0.0%  v8::internal::HeapObject::IsJSObject(v8::internal::PtrComprCageBase) const
+     15    0.0%    0.0%  v8::internal::HeapObject::IsFeedbackCell(v8::internal::PtrComprCageBase) const
+     13    0.0%    0.0%  v8::internal::Runtime_CompileTurbofan_Concurrent(int, unsigned long*, v8::internal::Isolate*)
+     13    0.0%    0.0%  v8::internal::InstanceTypeChecker::IsJSFunction(v8::internal::InstanceType)
+     12    0.0%    0.0%  v8::internal::InstanceTypeChecker::IsFixedArrayBase(v8::internal::InstanceType)
+     12    0.0%    0.0%  v8::internal::InstanceTypeChecker::InstanceRangeChecker<(v8::internal::InstanceType)2065, (v8::internal::InstanceType)2080>::Check(v8::internal::InstanceType)
+     12    0.0%    0.0%  v8::internal::HeapObject::IsFixedArrayBase(v8::internal::PtrComprCageBase) const
+     11    0.0%    0.0%  v8::internal::HeapObject::IsJSFunction(v8::internal::PtrComprCageBase) const
+      9    0.0%    0.0%  v8::internal::Runtime_KeyedStoreIC_Slow(int, unsigned long*, v8::internal::Isolate*)
+      8    0.0%    0.0%  v8::internal::Runtime_DeleteProperty(int, unsigned long*, v8::internal::Isolate*)
+      8    0.0%    0.0%  v8::internal::Builtin_ConsoleLog(int, unsigned long*, v8::internal::Isolate*)
+      5    0.0%    0.0%  v8::internal::Runtime_CompileLazy(int, unsigned long*, v8::internal::Isolate*)
+      4    0.0%    0.0%  v8::internal::Runtime_LoadNoFeedbackIC_Miss(int, unsigned long*, v8::internal::Isolate*)
+      4    0.0%    0.0%  v8::internal::Builtin_NumberPrototypeToFixed(int, unsigned long*, v8::internal::Isolate*)
+      3    0.0%    0.0%  v8::internal::Runtime_StoreIC_Miss(int, unsigned long*, v8::internal::Isolate*)
+      3    0.0%    0.0%  v8::internal::Runtime_StackGuardWithGap(int, unsigned long*, v8::internal::Isolate*)
+      3    0.0%    0.0%  v8::internal::Runtime_NewObject(int, unsigned long*, v8::internal::Isolate*)
+      3    0.0%    0.0%  v8::internal::Builtin_DateNow(int, unsigned long*, v8::internal::Isolate*)
+      2    0.0%    0.0%  v8::internal::Runtime_StoreGlobalICNoFeedback_Miss(int, unsigned long*, v8::internal::Isolate*)
+      2    0.0%    0.0%  v8::internal::Runtime_LoadIC_Miss(int, unsigned long*, v8::internal::Isolate*)
+      2    0.0%    0.0%  v8::internal::MarkingStateBase<v8::internal::MarkingState, (v8::internal::AccessMode)0>::IsImpossible(v8::internal::HeapObject) const
+      1    0.0%    0.0%  v8::internal::Runtime_StackGuard(int, unsigned long*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_NewClosure_Tenured(int, unsigned long*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_KeyedStoreIC_Miss(int, unsigned long*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_DeclareGlobals(int, unsigned long*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_CompileOptimizedOSR(int, unsigned long*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Object::IsPropertyCell() const
+      1    0.0%    0.0%  v8::internal::Object::IsBytecodeArray() const
+      1    0.0%    0.0%  v8::internal::HeapObject::IsStoreHandler() const
+      1    0.0%    0.0%  v8::internal::HeapObject::IsSeqOneByteString() const
+      1    0.0%    0.0%  v8::internal::HeapObject::IsBytecodeArray() const
+      1    0.0%    0.0%  v8::internal::HandleScopeImplementer::blocks()
+      1    0.0%    0.0%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckLTImpl<int, int>(int, int, char const*)
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   9350    5.5%  /home/joshchen/v8/out.gn/x64.debug/libv8.so
+   1688   18.1%    Builtin: KeyedStoreIC_Megamorphic
+   1684   99.8%      JS: *Case.runJsObject test.js:120:39
+   1684  100.0%        Script: ~<anonymous> test.js:1:1
+   1610   17.2%    Builtin: KeyedStoreICTrampoline
+   1610  100.0%      JS: *Case.runJsObject test.js:120:39
+   1610  100.0%        Script: ~<anonymous> test.js:1:1
+   1245   13.3%    Builtin: KeyedStoreIC
+   1239   99.5%      JS: *Case.runJsObject test.js:120:39
+   1239  100.0%        Script: ~<anonymous> test.js:1:1
+    312    3.3%    v8::internal::Runtime_NewArray(int, unsigned long*, v8::internal::Isolate*)
+    312  100.0%      JS: ~Case test.js:15:15
+    312  100.0%        Script: ~<anonymous> test.js:1:1
+    167    1.8%    v8::internal::Runtime_SetKeyedProperty(int, unsigned long*, v8::internal::Isolate*)
+    166   99.4%      JS: *Case.runJsObject test.js:120:39
+    166  100.0%        Script: ~<anonymous> test.js:1:1
+
+   5481    3.2%  v8::internal::CheckObjectType(unsigned long, unsigned long, unsigned long)
+   2068   37.7%    Builtin: KeyedStoreIC_Megamorphic
+   2066   99.9%      JS: *Case.runJsObject test.js:120:39
+   2066  100.0%        Script: ~<anonymous> test.js:1:1
+   1811   33.0%    Builtin: KeyedStoreICTrampoline
+   1811  100.0%      JS: *Case.runJsObject test.js:120:39
+   1811  100.0%        Script: ~<anonymous> test.js:1:1
+   1530   27.9%    Builtin: KeyedStoreIC
+   1523   99.5%      JS: *Case.runJsObject test.js:120:39
+   1523  100.0%        Script: ~<anonymous> test.js:1:1
+
+   4621    2.7%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::ptr() const
+   1132   24.5%    Builtin: KeyedStoreIC_Megamorphic
+   1132  100.0%      JS: *Case.runJsObject test.js:120:39
+   1132  100.0%        Script: ~<anonymous> test.js:1:1
+   1125   24.3%    Builtin: KeyedStoreICTrampoline
+   1125  100.0%      JS: *Case.runJsObject test.js:120:39
+   1125  100.0%        Script: ~<anonymous> test.js:1:1
+    822   17.8%    Builtin: KeyedStoreIC
+    819   99.6%      JS: *Case.runJsObject test.js:120:39
+    819  100.0%        Script: ~<anonymous> test.js:1:1
+    101    2.2%    v8::internal::Runtime_NewArray(int, unsigned long*, v8::internal::Isolate*)
+    101  100.0%      JS: ~Case test.js:15:15
+    101  100.0%        Script: ~<anonymous> test.js:1:1
+     89    1.9%    v8::internal::Runtime_SetKeyedProperty(int, unsigned long*, v8::internal::Isolate*)
+     89  100.0%      JS: *Case.runJsObject test.js:120:39
+     89  100.0%        Script: ~<anonymous> test.js:1:1
+
+   4245    2.5%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::TaggedImpl(unsigned long)
+    941   22.2%    Builtin: KeyedStoreIC_Megamorphic
+    939   99.8%      JS: *Case.runJsObject test.js:120:39
+    939  100.0%        Script: ~<anonymous> test.js:1:1
+    864   20.4%    Builtin: KeyedStoreICTrampoline
+    864  100.0%      JS: *Case.runJsObject test.js:120:39
+    864  100.0%        Script: ~<anonymous> test.js:1:1
+    712   16.8%    Builtin: KeyedStoreIC
+    711   99.9%      JS: *Case.runJsObject test.js:120:39
+    711  100.0%        Script: ~<anonymous> test.js:1:1
+    145    3.4%    v8::internal::Runtime_NewArray(int, unsigned long*, v8::internal::Isolate*)
+    145  100.0%      JS: ~Case test.js:15:15
+    145  100.0%        Script: ~<anonymous> test.js:1:1
+    103    2.4%    v8::internal::Runtime_SetKeyedProperty(int, unsigned long*, v8::internal::Isolate*)
+    103  100.0%      JS: *Case.runJsObject test.js:120:39
+    103  100.0%        Script: ~<anonymous> test.js:1:1
+
+   4227    2.5%  v8::internal::TaggedField<v8::internal::MapWord, 0>::Relaxed_Load_Map_Word(v8::internal::PtrComprCageBase, v8::internal::HeapObject)
+   1319   31.2%    Builtin: KeyedStoreICTrampoline
+   1319  100.0%      JS: *Case.runJsObject test.js:120:39
+   1319  100.0%        Script: ~<anonymous> test.js:1:1
+   1296   30.7%    Builtin: KeyedStoreIC_Megamorphic
+   1295   99.9%      JS: *Case.runJsObject test.js:120:39
+   1295  100.0%        Script: ~<anonymous> test.js:1:1
+    954   22.6%    Builtin: KeyedStoreIC
+    952   99.8%      JS: *Case.runJsObject test.js:120:39
+    952  100.0%        Script: ~<anonymous> test.js:1:1
+     91    2.2%    v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*)
+     91  100.0%      JS: *Case test.js:15:15
+     91  100.0%        Script: ~<anonymous> test.js:1:1
+     68    1.6%    v8::internal::Runtime_SetKeyedProperty(int, unsigned long*, v8::internal::Isolate*)
+     68  100.0%      JS: *Case.runJsObject test.js:120:39
+     68  100.0%        Script: ~<anonymous> test.js:1:1
+
+   3963    2.3%  v8::internal::Map v8::base::bit_cast<v8::internal::Map, v8::internal::Object>(v8::internal::Object const&)
+   1248   31.5%    Builtin: KeyedStoreIC_Megamorphic
+   1247   99.9%      JS: *Case.runJsObject test.js:120:39
+   1247  100.0%        Script: ~<anonymous> test.js:1:1
+   1126   28.4%    Builtin: KeyedStoreICTrampoline
+   1126  100.0%      JS: *Case.runJsObject test.js:120:39
+   1126  100.0%        Script: ~<anonymous> test.js:1:1
+    833   21.0%    Builtin: KeyedStoreIC
+    831   99.8%      JS: *Case.runJsObject test.js:120:39
+    831  100.0%        Script: ~<anonymous> test.js:1:1
+     94    2.4%    v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*)
+     94  100.0%      JS: *Case test.js:15:15
+     94  100.0%        Script: ~<anonymous> test.js:1:1
+     54    1.4%    v8::internal::Runtime_SetKeyedProperty(int, unsigned long*, v8::internal::Isolate*)
+     54  100.0%      JS: *Case.runJsObject test.js:120:39
+     54  100.0%        Script: ~<anonymous> test.js:1:1
+
+   3292    1.9%  v8::internal::GetPtrComprCageBaseSlow(v8::internal::HeapObject)
+   1070   32.5%    Builtin: KeyedStoreIC_Megamorphic
+   1068   99.8%      JS: *Case.runJsObject test.js:120:39
+   1068  100.0%        Script: ~<anonymous> test.js:1:1
+   1007   30.6%    Builtin: KeyedStoreICTrampoline
+   1007  100.0%      JS: *Case.runJsObject test.js:120:39
+   1007  100.0%        Script: ~<anonymous> test.js:1:1
+    765   23.2%    Builtin: KeyedStoreIC
+    761   99.5%      JS: *Case.runJsObject test.js:120:39
+    761  100.0%        Script: ~<anonymous> test.js:1:1
+     55    1.7%    v8::internal::Runtime_SetKeyedProperty(int, unsigned long*, v8::internal::Isolate*)
+     55  100.0%      JS: *Case.runJsObject test.js:120:39
+     55  100.0%        Script: ~<anonymous> test.js:1:1
+
+   3072    1.8%  v8::internal::Object::Object(unsigned long)
+    804   26.2%    Builtin: KeyedStoreIC_Megamorphic
+    804  100.0%      JS: *Case.runJsObject test.js:120:39
+    804  100.0%        Script: ~<anonymous> test.js:1:1
+    692   22.5%    Builtin: KeyedStoreICTrampoline
+    692  100.0%      JS: *Case.runJsObject test.js:120:39
+    692  100.0%        Script: ~<anonymous> test.js:1:1
+    526   17.1%    Builtin: KeyedStoreIC
+    525   99.8%      JS: *Case.runJsObject test.js:120:39
+    525  100.0%        Script: ~<anonymous> test.js:1:1
+    111    3.6%    v8::internal::Runtime_NewArray(int, unsigned long*, v8::internal::Isolate*)
+    111  100.0%      JS: ~Case test.js:15:15
+    111  100.0%        Script: ~<anonymous> test.js:1:1
+     58    1.9%    v8::internal::Runtime_SetKeyedProperty(int, unsigned long*, v8::internal::Isolate*)
+     58  100.0%      JS: *Case.runJsObject test.js:120:39
+     58  100.0%        Script: ~<anonymous> test.js:1:1
+
+   3046    1.8%  short std::Cr::__cxx_atomic_load[abi:v16000]<short>(std::Cr::__cxx_atomic_base_impl<short> const volatile*, std::Cr::memory_order)
+    830   27.2%    Builtin: KeyedStoreIC_Megamorphic
+    828   99.8%      JS: *Case.runJsObject test.js:120:39
+    828  100.0%        Script: ~<anonymous> test.js:1:1
+    753   24.7%    Builtin: KeyedStoreICTrampoline
+    753  100.0%      JS: *Case.runJsObject test.js:120:39
+    753  100.0%        Script: ~<anonymous> test.js:1:1
+    573   18.8%    Builtin: KeyedStoreIC
+    571   99.7%      JS: *Case.runJsObject test.js:120:39
+    571  100.0%        Script: ~<anonymous> test.js:1:1
+     48    1.6%    v8::internal::Runtime_SetKeyedProperty(int, unsigned long*, v8::internal::Isolate*)
+     48  100.0%      JS: *Case.runJsObject test.js:120:39
+     48  100.0%        Script: ~<anonymous> test.js:1:1
+     43    1.4%    v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*)
+     43  100.0%      JS: *Case test.js:15:15
+     43  100.0%        Script: ~<anonymous> test.js:1:1
+
+   2624    1.6%  v8::internal::GetIsolateFromHeapObject(v8::internal::HeapObject, v8::internal::Isolate**)
+    765   29.2%    Builtin: KeyedStoreIC_Megamorphic
+    762   99.6%      JS: *Case.runJsObject test.js:120:39
+    762  100.0%        Script: ~<anonymous> test.js:1:1
+    725   27.6%    Builtin: KeyedStoreICTrampoline
+    725  100.0%      JS: *Case.runJsObject test.js:120:39
+    725  100.0%        Script: ~<anonymous> test.js:1:1
+    614   23.4%    Builtin: KeyedStoreIC
+    613   99.8%      JS: *Case.runJsObject test.js:120:39
+    613  100.0%        Script: ~<anonymous> test.js:1:1
+     33    1.3%    v8::internal::Runtime_NewArray(int, unsigned long*, v8::internal::Isolate*)
+     33  100.0%      JS: ~Case test.js:15:15
+     33  100.0%        Script: ~<anonymous> test.js:1:1
+
+   2586    1.5%  int std::Cr::__cxx_atomic_load[abi:v16000]<int>(std::Cr::__cxx_atomic_base_impl<int> const volatile*, std::Cr::memory_order)
+    576   22.3%    Builtin: KeyedStoreIC_Megamorphic
+    575   99.8%      JS: *Case.runJsObject test.js:120:39
+    575  100.0%        Script: ~<anonymous> test.js:1:1
+    423   16.4%    Builtin: KeyedStoreIC
+    421   99.5%      JS: *Case.runJsObject test.js:120:39
+    421  100.0%        Script: ~<anonymous> test.js:1:1
+    410   15.9%    Builtin: KeyedStoreICTrampoline
+    410  100.0%      JS: *Case.runJsObject test.js:120:39
+    410  100.0%        Script: ~<anonymous> test.js:1:1
+     66    2.6%    v8::internal::Runtime_NewArray(int, unsigned long*, v8::internal::Isolate*)
+     66  100.0%      JS: ~Case test.js:15:15
+     66  100.0%        Script: ~<anonymous> test.js:1:1
+     35    1.4%    v8::internal::Runtime_SetKeyedProperty(int, unsigned long*, v8::internal::Isolate*)
+     35  100.0%      JS: *Case.runJsObject test.js:120:39
+     35  100.0%        Script: ~<anonymous> test.js:1:1
+     35    1.4%    v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*)
+     35  100.0%      JS: *Case test.js:15:15
+     35  100.0%        Script: ~<anonymous> test.js:1:1
+
+   2559    1.5%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::IsStrong() const    687   26.8%    Builtin: KeyedStoreICTrampoline
+    687  100.0%      JS: *Case.runJsObject test.js:120:39
+    687  100.0%        Script: ~<anonymous> test.js:1:1
+    588   23.0%    Builtin: KeyedStoreIC_Megamorphic
+    587   99.8%      JS: *Case.runJsObject test.js:120:39
+    587  100.0%        Script: ~<anonymous> test.js:1:1
+    406   15.9%    Builtin: KeyedStoreIC
+    403   99.3%      JS: *Case.runJsObject test.js:120:39
+    403  100.0%        Script: ~<anonymous> test.js:1:1
+     68    2.7%    v8::internal::Runtime_NewArray(int, unsigned long*, v8::internal::Isolate*)
+     68  100.0%      JS: ~Case test.js:15:15
+     68  100.0%        Script: ~<anonymous> test.js:1:1
+
+   2401    1.4%  _ZN2v84base9CmpLEImplINS_8internal12InstanceTypeES3_EENSt2Cr9enable_ifIXaantsr21is_signed_vs_unsignedIT_T0_EE5valuentsr21is_unsigned_vs_signedIS6_S7_EE5valueEbE4typeES6_S7_
+    889   37.0%    Builtin: KeyedStoreICTrampoline
+    889  100.0%      JS: *Case.runJsObject test.js:120:39
+    889  100.0%        Script: ~<anonymous> test.js:1:1
+    868   36.2%    Builtin: KeyedStoreIC_Megamorphic
+    868  100.0%      JS: *Case.runJsObject test.js:120:39
+    868  100.0%        Script: ~<anonymous> test.js:1:1
+    608   25.3%    Builtin: KeyedStoreIC
+    606   99.7%      JS: *Case.runJsObject test.js:120:39
+    606  100.0%        Script: ~<anonymous> test.js:1:1
+
+   2394    1.4%  std::Cr::basic_string<char, std::Cr::char_traits<char>, std::Cr::allocator<char> >* v8::base::CheckLEImpl<v8::internal::InstanceType, v8::internal::InstanceType>(v8::internal::InstanceType, v8::internal::InstanceType, char const*)
+    934   39.0%    Builtin: KeyedStoreIC_Megamorphic
+    933   99.9%      JS: *Case.runJsObject test.js:120:39
+    933  100.0%        Script: ~<anonymous> test.js:1:1
+    822   34.3%    Builtin: KeyedStoreICTrampoline
+    822  100.0%      JS: *Case.runJsObject test.js:120:39
+    822  100.0%        Script: ~<anonymous> test.js:1:1
+    605   25.3%    Builtin: KeyedStoreIC
+    603   99.7%      JS: *Case.runJsObject test.js:120:39
+    603  100.0%        Script: ~<anonymous> test.js:1:1
+
+   2146    1.3%  v8::internal::HeapObject::map_word(v8::internal::PtrComprCageBase, v8::RelaxedLoadTag) const
+    633   29.5%    Builtin: KeyedStoreIC_Megamorphic
+    632   99.8%      JS: *Case.runJsObject test.js:120:39
+    632  100.0%        Script: ~<anonymous> test.js:1:1
+    580   27.0%    Builtin: KeyedStoreICTrampoline
+    580  100.0%      JS: *Case.runJsObject test.js:120:39
+    580  100.0%        Script: ~<anonymous> test.js:1:1
+    440   20.5%    Builtin: KeyedStoreIC
+    438   99.5%      JS: *Case.runJsObject test.js:120:39
+    438  100.0%        Script: ~<anonymous> test.js:1:1
+     54    2.5%    v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*)
+     54  100.0%      JS: *Case test.js:15:15
+     54  100.0%        Script: ~<anonymous> test.js:1:1
+     27    1.3%    v8::internal::Runtime_NewArray(int, unsigned long*, v8::internal::Isolate*)
+     27  100.0%      JS: ~Case test.js:15:15
+     27  100.0%        Script: ~<anonymous> test.js:1:1
+     26    1.2%    v8::internal::Runtime_SetKeyedProperty(int, unsigned long*, v8::internal::Isolate*)
+     26  100.0%      JS: *Case.runJsObject test.js:120:39
+     26  100.0%        Script: ~<anonymous> test.js:1:1
+
+   1956    1.2%  v8::internal::TorqueGeneratedString<v8::internal::String, v8::internal::Name>::cast(v8::internal::Object)
+    782   40.0%    Builtin: KeyedStoreIC_Megamorphic
+    780   99.7%      JS: *Case.runJsObject test.js:120:39
+    780  100.0%        Script: ~<anonymous> test.js:1:1
+    653   33.4%    Builtin: KeyedStoreICTrampoline
+    653  100.0%      JS: *Case.runJsObject test.js:120:39
+    653  100.0%        Script: ~<anonymous> test.js:1:1
+    499   25.5%    Builtin: KeyedStoreIC
+    497   99.6%      JS: *Case.runJsObject test.js:120:39
+    497  100.0%        Script: ~<anonymous> test.js:1:1
+
+   1922    1.1%  v8::internal::HeapObject::HeapObject(unsigned long)
+    562   29.2%    Builtin: KeyedStoreIC_Megamorphic
+    562  100.0%      JS: *Case.runJsObject test.js:120:39
+    562  100.0%        Script: ~<anonymous> test.js:1:1
+    430   22.4%    Builtin: KeyedStoreICTrampoline
+    430  100.0%      JS: *Case.runJsObject test.js:120:39
+    430  100.0%        Script: ~<anonymous> test.js:1:1
+    358   18.6%    Builtin: KeyedStoreIC
+    357   99.7%      JS: *Case.runJsObject test.js:120:39
+    357  100.0%        Script: ~<anonymous> test.js:1:1
+     75    3.9%    v8::internal::Runtime_NewArray(int, unsigned long*, v8::internal::Isolate*)
+     75  100.0%      JS: ~Case test.js:15:15
+     75  100.0%        Script: ~<anonymous> test.js:1:1
+
+   1907    1.1%  v8::internal::GetPtrComprCageBase(v8::internal::HeapObject)
+    631   33.1%    Builtin: KeyedStoreIC_Megamorphic
+    630   99.8%      JS: *Case.runJsObject test.js:120:39
+    630  100.0%        Script: ~<anonymous> test.js:1:1
+    613   32.1%    Builtin: KeyedStoreICTrampoline
+    613  100.0%      JS: *Case.runJsObject test.js:120:39
+    613  100.0%        Script: ~<anonymous> test.js:1:1
+    446   23.4%    Builtin: KeyedStoreIC
+    444   99.6%      JS: *Case.runJsObject test.js:120:39
+    444  100.0%        Script: ~<anonymous> test.js:1:1
+     32    1.7%    v8::internal::Runtime_SetKeyedProperty(int, unsigned long*, v8::internal::Isolate*)
+     32  100.0%      JS: *Case.runJsObject test.js:120:39
+     32  100.0%        Script: ~<anonymous> test.js:1:1
+
+   1886    1.1%  v8::internal::TaggedImpl<(v8::internal::HeapObjectReferenceType)1, unsigned long>::IsSmi() const
+    418   22.2%    Builtin: KeyedStoreIC_Megamorphic
+    418  100.0%      JS: *Case.runJsObject test.js:120:39
+    418  100.0%        Script: ~<anonymous> test.js:1:1
+    346   18.3%    Builtin: KeyedStoreICTrampoline
+    346  100.0%      JS: *Case.runJsObject test.js:120:39
+    346  100.0%        Script: ~<anonymous> test.js:1:1
+    239   12.7%    Builtin: KeyedStoreIC
+    239  100.0%      JS: *Case.runJsObject test.js:120:39
+    239  100.0%        Script: ~<anonymous> test.js:1:1
+     83    4.4%    v8::internal::Runtime_NewArray(int, unsigned long*, v8::internal::Isolate*)
+     83  100.0%      JS: ~Case test.js:15:15
+     83  100.0%        Script: ~<anonymous> test.js:1:1
+
+   1862    1.1%  v8::internal::MapWord::ToMap() const
+    538   28.9%    Builtin: KeyedStoreIC_Megamorphic
+    538  100.0%      JS: *Case.runJsObject test.js:120:39
+    538  100.0%        Script: ~<anonymous> test.js:1:1
+    466   25.0%    Builtin: KeyedStoreICTrampoline
+    466  100.0%      JS: *Case.runJsObject test.js:120:39
+    466  100.0%        Script: ~<anonymous> test.js:1:1
+    353   19.0%    Builtin: KeyedStoreIC
+    353  100.0%      JS: *Case.runJsObject test.js:120:39
+    353  100.0%        Script: ~<anonymous> test.js:1:1
+     36    1.9%    v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*)
+     36  100.0%      JS: *Case test.js:15:15
+     36  100.0%        Script: ~<anonymous> test.js:1:1
+     20    1.1%    v8::internal::Runtime_NewArray(int, unsigned long*, v8::internal::Isolate*)
+     20  100.0%      JS: ~Case test.js:15:15
+     20  100.0%        Script: ~<anonymous> test.js:1:1
+
+   1709    1.0%  unsigned int v8::base::AsAtomicImpl<int>::Relaxed_Load<unsigned int>(unsigned int*)
+    511   29.9%    Builtin: KeyedStoreICTrampoline
+    511  100.0%      JS: *Case.runJsObject test.js:120:39
+    511  100.0%        Script: ~<anonymous> test.js:1:1
+    487   28.5%    Builtin: KeyedStoreIC_Megamorphic
+    485   99.6%      JS: *Case.runJsObject test.js:120:39
+    485  100.0%        Script: ~<anonymous> test.js:1:1
+    342   20.0%    Builtin: KeyedStoreIC
+    341   99.7%      JS: *Case.runJsObject test.js:120:39
+    341  100.0%        Script: ~<anonymous> test.js:1:1
+     49    2.9%    v8::internal::Runtime_SetKeyedProperty(int, unsigned long*, v8::internal::Isolate*)
+     49  100.0%      JS: *Case.runJsObject test.js:120:39
+     49  100.0%        Script: ~<anonymous> test.js:1:1
+     40    2.3%    v8::internal::Runtime_NewArray(int, unsigned long*, v8::internal::Isolate*)
+     40  100.0%      JS: ~Case test.js:15:15
+     40  100.0%        Script: ~<anonymous> test.js:1:1
+     33    1.9%    v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*)
+     33  100.0%      JS: *Case test.js:15:15
+     33  100.0%        Script: ~<anonymous> test.js:1:1
+
+   1697    1.0%  v8::internal::HeapObject::map(v8::internal::PtrComprCageBase) const
+    400   23.6%    Builtin: KeyedStoreICTrampoline
+    400  100.0%      JS: *Case.runJsObject test.js:120:39
+    400  100.0%        Script: ~<anonymous> test.js:1:1
+    397   23.4%    Builtin: KeyedStoreIC_Megamorphic
+    396   99.7%      JS: *Case.runJsObject test.js:120:39
+    396  100.0%        Script: ~<anonymous> test.js:1:1
+    333   19.6%    Builtin: KeyedStoreIC
+    333  100.0%      JS: *Case.runJsObject test.js:120:39
+    333  100.0%        Script: ~<anonymous> test.js:1:1
+     41    2.4%    v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*)
+     41  100.0%      JS: *Case test.js:15:15
+     41  100.0%        Script: ~<anonymous> test.js:1:1
+     29    1.7%    v8::internal::Runtime_NewArray(int, unsigned long*, v8::internal::Isolate*)
+     29  100.0%      JS: ~Case test.js:15:15
+     29  100.0%        Script: ~<anonymous> test.js:1:1
+     28    1.6%    v8::internal::Runtime_SetKeyedProperty(int, unsigned long*, v8::internal::Isolate*)
+     28  100.0%      JS: *Case.runJsObject test.js:120:39
+     28  100.0%        Script: ~<anonymous> test.js:1:1
