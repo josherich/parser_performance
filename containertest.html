@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 container perf test</title>
+  </head>
+  <body onLoad="init();">
+    <button id="runButton">Run</button><br>
+    <textarea id="log" cols="80" rows="30"></textarea>
+
+    <script type="text/javascript">
+        function init () {
+            document.getElementById("runButton").addEventListener(
+                "click", run, false
+            );
+        };
+
+        function run () {
+            document.getElementById("runButton").textContent = "Running";
+            
+            var e = document.createElement("script");
+            e.src = "containertest.js";
+            document.getElementsByTagName("body")[0].appendChild(e);
+        };
+    </script>
+  </body>
+</html>
