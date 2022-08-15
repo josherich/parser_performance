@@ -80,6 +80,8 @@ function Case () {
 Case.prototype.setUp = function () {
     this.map = new Map();
     this.weakMap = new WeakMap();
+    this.weakSet = new WeakSet();
+
     this.jsObj = Object.create(null);
 
     this.collectGarbage();
@@ -161,6 +163,23 @@ Case.prototype.runWeakMap = function () {
     this.tearDown();
 };
 
+Case.prototype.runWeakSet = function() {
+    this.setUp();
+    this.log("// new WeakSet()");
+    this.time("weakset");
+    for (var i = 0; i < OBJECT_COUNT; i += STEP_SIZE) {
+        this.logTick(i, false);
+        for (var j = 0, n = Math.min(OBJECT_COUNT - i, STEP_SIZE); j < n; j++) {
+            var k = (i + j) | 0;
+            var obj = this.objects[k];
+            this.weakSet.add(obj);
+        }
+        this.logTick(i, true);
+    }
+    this.timeEnd("weakset");
+    this.tearDown();
+}
+
 Case.prototype.tearDown = function () {
     if (this.map.clear)
         this.map.clear();
@@ -183,6 +202,7 @@ Case.prototype.tearDown = function () {
         c.runJsObject();
         c.runMap();
         c.runWeakMap();
+        c.runWeakSet();
     }
 
     c.log("// done");
