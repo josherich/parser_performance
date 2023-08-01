@@ -1,11 +1,11 @@
 const { spawnSync } = require('child_process');
-const packageName = '@babel/parser';
+const packageName = 'puppeteer';
 
 const list =  spawnSync('npm', ['view', packageName, 'versions', '--json']);
 const all = JSON.parse(list.stdout);
 
 all.forEach(version => {
-  if (version.includes('rc') || version.includes('beta')) return;
+  if (version.includes('rc') || version.includes('beta') || version.includes('next')) return;
   try {
     require(`${packageName}_${version}`);
     console.log(`${packageName}_${version} installed.`);
